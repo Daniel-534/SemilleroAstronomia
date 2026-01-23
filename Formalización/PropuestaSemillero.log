@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  23 JAN 2026 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  23 JAN 2026 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,8 +542,7 @@ l.59 \clearpage
 
 [2
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
+]
 
 [3] (./PropuestaSemillero.aux
 LaTeX Info: Redefining \. on input line 11.
@@ -561,11 +560,11 @@ Package rerunfilecheck Info: File `PropuestaSemillero.out' has not changed.
 (rerunfilecheck)             Checksum: BBF0766516B5E0B0492938455004237F;2498.
  ) 
 Here is how much of TeX's memory you used:
- 14102 strings out of 473190
- 224310 string characters out of 5715801
+ 14099 strings out of 473190
+ 224266 string characters out of 5715801
  655080 words of memory out of 5000000
- 37172 multiletter control sequences out of 15000+600000
- 565156 words of font info for 59 fonts, out of 8000000 for 9000
+ 37171 multiletter control sequences out of 15000+600000
+ 564821 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,5n,79p,550b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -573,12 +572,11 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on PropuestaSemillero.pdf (4 pages, 105158 bytes).
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on PropuestaSemillero.pdf (4 pages, 102314 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 131 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  19 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
