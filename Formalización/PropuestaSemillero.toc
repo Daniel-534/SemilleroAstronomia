@@ -1,0 +1,15 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción y Justificación}{2}{section.1}%
+\contentsline {section}{\numberline {2}Objetivos}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Objetivo General}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Objetivos Epecíficos}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Metodología y Plan de Trabajo}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Modalidad de Trabajo}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Cronograma de Temáticas}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Frecuencia y Logística}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Organización y Responsabilidades}{2}{section.4}%
+\contentsline {section}{\numberline {5}Recursos y Necesidades}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Recursos Existentes}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Recursos por Gestionar (Priorizados)}{3}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Alianzas Estratégicas a Gestionar}{3}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Evaluación y Seguimiento}{3}{section.6}%
