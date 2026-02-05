@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769209132.93591 "PropuestaSemillero.tex" "PropuestaSemillero.pdf" "PropuestaSemillero" 1769209136.63452 0
+["pdflatex"] 1769213744.45308 "PropuestaSemillero.tex" "PropuestaSemillero.pdf" "PropuestaSemillero" 1769213746.10816 0
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -94,10 +94,10 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1760400667 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "PropuestaSemillero.aux" 1769209136.41376 2142 72db1860cd085cabc99995b4dc25be0a "pdflatex"
-  "PropuestaSemillero.out" 1769209136.41698 2498 bbf0766516b5e0b0492938455004237f "pdflatex"
-  "PropuestaSemillero.tex" 1769209120.05601 6194 2dd13dc4b143f8a578df6427b9538d01 ""
-  "PropuestaSemillero.toc" 1769209136.41793 1236 a7a4c7e6fa3b9841acaf36846fe96326 "pdflatex"
+  "PropuestaSemillero.aux" 1769213745.91737 2142 72db1860cd085cabc99995b4dc25be0a "pdflatex"
+  "PropuestaSemillero.out" 1769213745.92043 2498 bbf0766516b5e0b0492938455004237f "pdflatex"
+  "PropuestaSemillero.tex" 1769213732.9454 6135 4c7023ce1cd46bcf731250b5729ba7ca ""
+  "PropuestaSemillero.toc" 1769213745.92116 1236 a7a4c7e6fa3b9841acaf36846fe96326 "pdflatex"
   (generated)
   "PropuestaSemillero.aux"
   "PropuestaSemillero.log"
