@@ -1,1 +1,0 @@
-Banco con problemas de varios niveles, para evaluar con los profesores y determinar a qué grado son adecuados los problemas.
