@@ -1,0 +1,905 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{afterpage}
+\usepackage{setspace}
+\usepackage{xspace}
+
+
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{C}{>{\Centering\arraybackslash}X}
+
+
+
+% cabecera
+\pagestyle{fancy}
+\fancyhead[l]{Semillero de Astronomía}
+\fancyhead[c]{Banco de Problemas \#2}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% Comando para espacio vertical
+\newcommand{\vsp}{\vspace{0.5cm}}
+
+%% Definicion de comandos para formato de unidades fisicas %%
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\km}{\text{km}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\g}{\text{g}}
+\newcommand{\kg}{\text{kg}}
+\newcommand{\Msolar}{\text{M}_\odot}
+\newcommand{\Mterrestre}{\text{M}_\oplus}
+\newcommand{\AU}{\text{AU}}
+\newcommand{\ly}{\text{ly}}
+\newcommand{\nT}{\text{nT}}
+\newcommand{\keV}{\text{keV}}
+\newcommand{\MeV}{\text{MeV}}
+\newcommand{\GeV}{\text{GeV}}
+\newcommand{\atoms}{\text{atoms}}
+\newcommand{\K}{\text{K}}
+\newcommand{\J}{\text{J}}
+\newcommand{\particles}{\text{particles}}
+\newcommand{\protones}{\text{p}^+}
+\newcommand{\electrones}{\text{e}^-}
+\newcommand{\Gy}{\text{Gy}}
+\newcommand{\My}{\text{My}}
+\newcommand{\nm}{\text{nm}}
+\newcommand{\blank}{\rule{2cm}{0.4pt}\xspace}
+
+\begin{document}
+
+% Portada
+\begin{titlepage}
+    \centering
+    
+    \vspace*{2cm}
+    
+    % Título principal - color negro normal
+    {\fontsize{36}{40}\selectfont\bfseries BANCO DE PROBLEMAS}
+    
+    \vsp
+    \vsp
+    
+    % Subtítulo
+    {\Large\textbf{Astronomía para las Ciencias Básicas}}
+    
+    \vsp
+    
+    {\large Volumen 2}
+    
+    \vspace{3cm}
+    
+    \rule{0.7\textwidth}{0.4pt}
+    
+    \vspace{2.5cm}
+    
+    {\LARGE\bfseries Institución Educativa}
+    
+    \vsp
+    
+    {\LARGE\bfseries Enrique Olaya Herrera}
+    
+    \vsp
+    
+    {\LARGE\bfseries (IEEOH)}
+    
+    \vspace{2.5cm}
+    
+    {\Large Una iniciativa del:}
+    
+    \vspace{0.8cm}
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{20}{24}\selectfont\bfseries
+        CENTRO DE INTERÉS:}
+        
+        \vspace{0.4cm}
+        
+        {\fontsize{24}{28}\selectfont\bfseries
+        SEMILLERO DE ASTRONOMÍA}
+    \end{minipage}
+    
+    \vfill
+    
+    % Espacio para el autor
+    \vspace{1.5cm}
+    
+    \begin{minipage}{\textwidth}
+        \centering
+        {\large Autor: Daniel Soto} \\
+        \vspace{0.3cm}
+        {\large \today}
+    \end{minipage}
+    
+    \nopagecolor
+    
+\end{titlepage}
+
+\section{Agujeros Negros Estelares Más Cercanos}
+
+¿Qué tan cerca está el agujero negro más cercano a nuestro Sol? Dado que nuestra galaxia, la Vía Láctea, es un disco muy plano de estrellas, podemos usar coordenadas cartesianas para trazar la ubicación de los agujeros negros más cercanos.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{CygnusX1.jpg}
+        \caption{Representación artística del sistema binario Cygnus X-1. A la izquierda, una estrella masiva y brillante pierde materia que es atraída por el agujero negro, formando un disco de acreción incandescente. 
+        La materia calentada a millones de grados emite rayos X, lo que convierte a Cygnus X-1 en una de las fuentes más intensas de este tipo de radiación en el cielo.}
+        \label{fig:9}
+    \end{figure}
+
+
+Los agujeros negros se crean cuando estrellas muy masivas explotan como supernovas. Afortunadamente, esto no ocurre con mucha frecuencia en nuestra región de la Vía Láctea, ¡por lo que los agujeros negros están realmente muy separados!
+
+La tabla siguiente proporciona las coordenadas de los siete agujeros negros más cercanos a nuestro Sol. La masa de cada agujero negro se da en unidades de masa solar, de modo que 16 significa que la masa del agujero negro es 16 veces la masa de nuestro Sol. Todas las distancias $(x, y, d)$ se dan en años luz, donde 1 año luz = 9.6 billones de kilómetros.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Nombre} & \textbf{Masa ($\Msolar$)} & \textbf{x ($\ly$)} & y \textbf{($\ly$)} & \textbf{d (\ly)} \\
+\hline
+A) Cygnus X-1 & 16 & 6600 & -2400 &  \\
+\hline
+B) SS-433 & 11 & 8000 & -14000 &  \\
+\hline
+C) Nova Monocerotis 1975 & 11 & -1400 & 2400 &  \\
+\hline
+D) Nova Persei 1992 & 5 & 5600 & 3300 &  \\
+\hline
+E) IL Lupi & 9 & 6500 & -11000 &  \\
+\hline
+F) Nova Vulpeculi 1988 & 8 & 2200 & -6100 &  \\
+\hline
+G) V404 Cygni & 12 & 6900 & -4000 &  \\
+\hline
+\end{tabular}
+\caption{Coordenadas de los siete agujeros negros más cercanos al Sol.}
+\label{tab:1}
+\end{table}
+
+\begin{enumerate}
+	\item Cree una cuadrícula de coordenadas cartesianas con el Sol en el origen.
+	 En esta cuadrícula, marque la ubicación de cada agujero negro mostrado en la tabla anterior.
+	 \item Determine la distancia de cada agujero negro al sol y agreguelo en la tabla.
+	 \item ¿Cuál es la distancia media, mediana y modal entre los agujeros negros estelares más cercanos en la vecindad de nuestro Sol?
+\end{enumerate}
+
+\newpage
+\section{Densidad}
+
+Los agujeros negros son tan increíblemente densos que enormes cantidades de materia pueden comprimirse en volúmenes muy pequeños. 
+Ningún evento físico conocido puede hacer que los agujeros negros sean más pequeños que la masa de una estrella pequeña. 
+Pero como los agujeros negros son un producto de la gravedad, al menos teóricamente, no hay límite para lo grande o lo pequeño que pueden ser.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{DensityBlackHole.jpg}
+        \caption{Cuanto más se hunde el espacio, más denso es el objeto. El agujero negro es la máxima compresión de la materia.}
+        \label{fig:2}
+    \end{figure}
+
+La tabla a continuación muestra el radio predicho de agujeros negros que contienen diversas cantidades de materia. 
+Ninguno de estos agujeros negros ha sido observado, pero sus tamaños se han determinado a partir de sus masas declaradas. 
+Las masas se dan todas en términos de la masa de nuestra Tierra $\Mterrestre$, $\sim 5.7 \times 10^{24}\kg$, 
+de modo que  $2 \Mterrestre$ significa la masa de un agujero negro con el doble de la masa de nuestra Tierra.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Masa ($\Mterrestre$)} & \textbf{Radio ($\cm$)} \\
+\hline
+2.0 & 16.8  \\
+\hline
+3.2 & 26.9  \\
+\hline
+5.0 & 42.0  \\
+\hline
+7.5 & 63.0  \\
+\hline
+8.7 & 73.1  \\
+\hline
+11.0 & 96.6  \\
+\hline
+\end{tabular}
+\caption{Radio predicho de agujeros negros con diferentes masas.}
+\label{tab:2}
+\end{table}
+
+\begin{enumerate}
+	\item Grafique los datos de la tabla.
+	\item A partir de la gráfica, use cualquier método para calcular la pendiente, $s$, de los datos. ¿Cuáles son las unidades físicas para el valor de esta pendiente?
+	\item A partir de la tabla, calcule la pendiente, S, de los datos.
+	\item Escriba una ecuación lineal de la forma $r(m) = s m + r_0$ que exprese la Ley de Masa-Radio del agujero negro.
+	\item ¿Qué predeciría como el radio de un agujero negro con la masa del planeta Júpiter, si la masa de Júpiter es 318 veces la masa de la Tierra?
+\end{enumerate}
+
+\newpage
+\section{Agujeros Negros y Temperaturas del Disco de Acreción}
+Cuanto más lejos cae una partícula hacia un agujero negro, más rápido viaja y más energía cinética posee. 
+La energía cinética se define matemáticamente como $E_k = \frac{1}{2} m v^2$, donde $m$ es la masa de la partícula y $v$ es su velocidad.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{AccretionDisk.jpg}
+        \caption{Representación del disco de acreción alrededor de un agujero negro, donde la intensidad lumínica refleja la temperatura extremadamente alta del gas en rotación.}
+        \label{fig:3}
+    \end{figure}
+
+
+Supongamos que toda esta energía se convierte en calor por fricción mientras la partícula cae, y que esta energía añadida hace que los gases cercanos se calienten. ¿Qué tan caliente se volverá el gas? La cantidad equivalente de energía térmica, $E_T$, transportada por una sola partícula es:
+
+\begin{equation}
+	E_T =  \frac{3}{2} kT
+	\label{eq:1}
+\end{equation}
+
+donde la constante de Boltzmann $k = 1.38 \times 10^{-23} \J / \K$. Si igualamos $E_k = E_T$, obtenemos:
+
+\begin{equation}
+	T = \frac{mv^2}{3k}
+	\label{eq:2}
+\end{equation}
+
+Si todas las partículas en un gas tuvieran esta misma energía cinética, diríamos que el gas tiene una temperatura de $T$ en Kelvin. También sabemos que la energía potencial de la partícula viene dada por:
+
+\begin{equation}
+	E_P = \frac{GMm}{R}
+	\label{eq:3}
+\end{equation}
+
+Por lo tanto, si igualamos $E_P = E_T$, también obtenemos la temperatura:
+
+\begin{equation}
+	T = \frac{2GMm}{3kR}
+	\label{eq:4}
+\end{equation}
+
+\vspace{5mm}
+\begin{enumerate}
+
+	\item La fórmula \eqref{eq:4} proporciona la temperatura aproximada del gas de hidrógeno cuya masa es $m = 1.6 \times 10^{-27} \kg$ en un disco de acreción alrededor de un agujero negro. 
+	¿cuál es la temperatura del material a la distancia de la órbita de la Tierra para un agujero negro de masa solar?
+	\begin{itemize}
+		\item $R = 1.47 \times 10^{11} \m$
+		\item $M = 1.9 \times 10^{30} \kg$
+		\item $G = 6.67 \times 10^{-11} \N \m ^2/\kg^2$
+	\end{itemize}
+	\item ¿Qué tan caliente estaría el disco a la distancia de Neptuno? $R = 4.4 \times 10^{12} \m$
+	\item Los rayos X son la forma más común de energía producida a temperaturas superiores a $100 000 \K$. La luz visible se produce a temperaturas superiores a $2 000 \K$. 
+	La radiación infrarroja se produce comúnmente a temperaturas inferiores a $500 \K$. ¿Qué esperarías ver si estudiases el disco de acreción alrededor de un agujero negro del tamaño de una masa solar?
+\end{enumerate}
+
+\section{El origen de la Vida}
+Todos estamos familiarizados con lo que popularmente se llama la \textit{Edad de los Dinosaurios}, pero en el estudio de la vida terrestre, 
+hubo muchas eras importantes que precedieron a los dinosaurios del período Cretácico hace 65 millones de años. 
+Los geólogos y paleontólogos identifican más de una docena de eras importantes desde la formación de la Tierra hace 4.6 mil millones de años. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{OriginOfLife.jpg}
+        \caption{Vida através de la historia}
+        \label{fig:4}
+    \end{figure}
+
+La vida en otros mundos, si existe, podría haber evolucionado a través de tipos similares de eras durante la vida útil de su planeta o estrella. En la siguiente lista, el tiempo se indica en miles de millones de años ($\Gy$).
+
+\begin{itemize}
+	\item \textbf{Era Hadeica (4.65 - 3.8)$\Gy$}:  Formación de la superficie de la Tierra; impactos asteroidales masivos. Formación de la Luna. Depósito de océanos. Aparición de agua dulce en tierra.
+	\item \textbf{Era Arcaica (3.4 - 2.5)$\Gy$:}  Primera evidencia de organismos unicelulares (3.8$\Gy$). Fotosíntesis (3.8$\Gy$); primeros microfósiles (3.6$\Gy$); 
+	primeras bacterias productoras de oxígeno (3.6$\Gy$); primeras alfombras fósiles estromatolíticas (3.0$\Gy$).
+	\item \textbf{Era Proterozoica (2.5 $\Gy$ - 550 $\My$):}  La atmósfera se vuelve oxigénica (2.1 $\Gy$); formación activa de montañas;
+	los protistas aparecen como la primera vida unicelular compleja (1.8$\Gy$); eucariotas multicelulares (1.0 $\Gy$); Tierra de bola de nieve (850 $\My$); formas de vida ediacáricas florecen (600 $\My$).
+	\item \textbf{Era Fanerozoica (550 $\My$ - 65 $\My$):}  Gran diversificación de la vida multicelular en océanos, tierra y aire.
+	\item \textbf{Era Cenozoica (65 $\My$ hasta hoy):} Fin de la megafauna de dinosaurios (65 $\My$); surgimiento de las formas de vida mamíferas; evolución humana (5 $\My$); aparecen los humanos modernos (50 000 años)
+\end{itemize}
+
+Dadas las duraciones de las diversas eras mencionadas anteriormente, y asumiendo que seleccionó un planeta similar a la Tierra en edad, masa, tamaño y temperatura promedio, ¿qué estimaría para los siguientes porcentajes expresados como porcentajes relativos a la edad del planeta?
+
+\vspace{5mm}
+\begin{enumerate}
+	\item El porcentaje de tiempo en que el planeta tiene vida de cualquier tipo.
+	\item El porcentaje de tiempo en que solo existe vida bacteriana (unicelular).
+	\item El porcentaje de tiempo en que las formas de vida son más complejas que las bacterias.
+	\item El porcentaje de tiempo en que existieron formas de vida similares a los mamíferos.
+	\item El porcentaje de tiempo en que las formas de vida son tan inteligentes como los humanos modernos.
+\end{enumerate}
+
+
+\section{Formas de Vida más Pequeñas}
+Las cosas pequeñas son más fáciles de fabricar que las grandes, y también son más numerosas; 
+por lo tanto, si estamos tratando de entender cómo surge la vida, resulta útil encontrar el ejemplo más pequeño de un \textit{ser vivo}. 
+En esa búsqueda, los científicos han encontrado bacterias, virus y priones, entre otros objetos biológicos pequeños. 
+Esta lista incluye objetos que poseen algunos, pero no todos, de los atributos más básicos de la vida: reproducción, consumo de energía y respiración.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{T4.jpg}
+        \caption{Bacteriófago T4, un virus que infecta bacterias. Su estructura compleja —con cabeza icosaédrica, cola contractil y fibras basales— le permite adherirse a la superficie bacteriana e inyectar su material genético.}
+        \label{fig:5}
+    \end{figure}
+
+La tabla siguiente indica los tamaños en nanómetros ($\nm$) de los objetos vivos y no vivos conocidos. También proporciona el número de genes y el número de nucleótidos en la molécula de ADN (o ARN).
+
+\begin{table}[H]
+\centering
+\small % Reduce ligeramente el tamaño de fuente
+\setlength{\tabcolsep}{4pt} % Reduce espacio entre columnas
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|c|}
+\hline
+\textbf{Name} & \textbf{Tamaño (nm)} & \textbf{Estado} & \textbf{Estructura} & \textbf{Núcleótidos (miles)} & \textbf{Genes} \\
+\hline
+Porcine Circovirus      & 17   & No vivo    & RNA  & 1.8   & 2    \\
+\hline
+Hepatitis-B             & 42   & No vivo    & RNA  & 3.0   & 4    \\
+\hline
+Rous sarcoma Virus      & 80   & No vivo    & RNA  & 3.5   & 3    \\
+\hline
+Lambda bacteriophage    & 100  & No vivo    & DNA  & 48    & 30   \\
+\hline
+T4 bacteriophage        & 150  & No vivo    & DNA  & 169   & 160  \\
+\hline
+Mycoplasma Gen.         & 250  & Vivo       & DNA  & 582   & 521  \\
+\hline
+Nanoarchaeum Equit.     & 400  & Vivo       & DNA  & 491   & 590  \\
+\hline
+Escherichia Coli        & 2000 & Vivo       & DNA  & 4000  & 3000 \\
+\hline
+\end{tabularx}
+\caption{Comparación de características genéticas y físicas de sistemas biológicos.}
+\label{tab:3}
+\end{table}
+
+\vspace{5mm}
+\begin{enumerate}
+	\item Cuanto más pequeño es un virus o sistema vivo, menos información puede almacenar. 
+	Suponga que cada uno de los sistemas en la tabla anterior se puede aproximar como una esfera con el diámetro indicado. 
+	Cree un gráfico que muestre el volumen, $V$, del sistema en nanómetros cúbicos $\nm^3$ frente al número, $N$, de nucleótidos (en miles). 
+	Como los números serán muy grandes, los valores reales que se grafiquen deben ser los logaritmos en base 10 de $N$ y $V$
+	\item Se descubre una forma de vida que tiene aproximadamente 1 000 nucleótidos. ¿Cuál podría ser una clasificación plausible para esta forma de vida: viva o no viva?
+	\item Se descubre una forma de vida que tiene un volumen de un billón de nanómetros cúbicos. ¿Cuántos nucleótidos podría tener este organismo?
+	\item Suponga que un bacteriófago $T4$ invadió una bacteria \textit{Escherichia Coli} y comenzó a reproducirse hasta que la pared bacteriana se rompió. 
+	¿Cuál sería aproximadamente el número máximo de bacteriófagos $T4$ que podrían producirse en el volumen de la bacteria?
+\end{enumerate}
+
+\section{La evolución de los nucleótidos y los genes}
+
+La molécula de ADN de los animales avanzados consiste en millones de nucleótidos que \textit{codifican} aminoácidos específicos 
+en el ensamblaje de grandes moléculas llamadas proteínas, que son esenciales para los sistemas vivos. 
+Cada proteína está codificada por una cadena de miles de nucleótidos que forman una unidad llamada gen. 
+Decenas de miles de genes se encuentran en las moléculas de ADN, que pueden activarse individualmente o en grupos para realizar funciones esenciales para las células vivas.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Coelicolor.jpeg}
+        \caption{Streptomyces coelicolor, una bacteria del suelo conocida por su estructura filamentosa y su capacidad para producir antibióticos. Su crecimiento en placas forma colonias con patrones florales característicos.}
+        \label{fig:6}
+    \end{figure}
+
+
+Desde 1990, miles de organismos han tenido sus \textit{genes secuenciados}. La tabla siguiente muestra los detalles de algunos organismos comunes.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Especie} & \textbf{Tipo} & \textbf{Edad ($\My$)} & \textbf{Nucleótidos} & \textbf{Genes} \\
+\hline
+Humano            & Mamífero     & 1       & 2.9 mil millones & 23,000 \\
+\hline
+Ratón             & Mamífero     & 75      & 3.4 mil millones & 23,000 \\
+\hline
+Arroz             & Planta       & 100     & 390 millones     & 28,300 \\
+\hline
+E. Coli           & Bacteria     & 150     & 4.6 millones     & 4,400  \\
+\hline
+Pez cebra         & Peces        & 300     & 1.2 mil millones & 15,760 \\
+\hline
+Naegleria Gruberi & Ameba        & 1,000   & 41 millones      & 15,727 \\
+\hline
+Streptomyces Coelicolor & Bacteria & 450   & 6.7 millones     & 7,842  \\
+\hline
+Mosca de la fruta & Insecto      & 250     & 122 millones     & 17,000 \\
+\hline
+Erizo de mar      & Molusco      & 300     & 814 millones     & 23,300 \\
+\hline
+Helicobacter Pylori & Bacteria   & 150     & 1.7 millones     & 1,589  \\
+\hline
+\end{tabular}
+\caption{Evolución de nucleótidos y genes en organismos comunes.}
+\label{tab:4}
+\end{table}
+
+
+\begin{enumerate}
+	\item Grafique el número de genes (en unidades de miles) frente al tiempo (en unidades de 100 millones de años). 
+	¿Cuál es aproximadamente la tasa de cambio del número de genes por cada cien millones de años hasta la actualidad?
+	\item Grafique el número de nucleótidos (en millones) frente al tiempo (en unidades de 100 millones de años). 
+	¿Cuál es aproximadamente la tasa de cambio en el número de nucleótidos por cada cien millones de años hasta la actualidad?
+	\item Suponga que se descubrió un planeta que, en promedio, tuvo el mismo tipo de evolución biológica que la Tierra durante sus primeros 4.6 mil millones de años, 
+	pero hoy en día tiene una edad de 7 mil millones de años. ¿Qué estimaría como el número de nucleótidos y genes para sus organismos más avanzados?
+\end{enumerate}
+
+\section{La Evolución de la Inteligencia}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{Brain.png}
+        \caption{Cerebro Humano}
+        \label{fig:7}
+    \end{figure}
+ La encefalización es una medida del tamaño del cerebro de un mamífero en comparación con su masa corporal. 
+Aunque los cuerpos grandes a menudo requieren cerebros proporcionalmente más grandes para operar todos sus sistemas, la encefalización se considera una medida 
+del tamaño "excesivo" del cerebro y, por tanto, una medida indirecta de la inteligencia bruta de una especie de mamífero. 
+La tabla siguiente muestra el \textit{cociente de encefalización} (EQ) para algunos mamíferos comunes, junto con la edad de la especie.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Especie} & \textbf{Edad ($\My$)} & \textbf{EQ} & \textbf{Tamaño Poblacional} & \textbf{Genes} \\
+\hline
+Humano            & 1       & 7.5 & 6 mil millones & 24000 \\
+\hline
+Delfín             & 50      & 4.1 & 600 000        & 24000 \\
+\hline
+Orca               & 70      & 2.7 & 5 000          & 20000 \\
+\hline
+Chimpancé          & 10      & 2.3 & 150 000        & 19700 \\
+\hline
+Perro              & 40      & 1.2 & 300 millones   & 19300 \\
+\hline
+Gato               & 12      & 1.0 & 200 millones   & 20285 \\
+\hline
+Caballo            & 50      & 0.9 & 58 millones    & 20436 \\
+\hline
+Rata               & 80      & 0.4 & 4 mil millones & 23 000 \\
+\hline
+\end{tabular}
+\caption{Encefalización a través el tiempo.}
+\label{tab:5}
+\end{table}
+
+\begin{enumerate}
+	\item Grafica el EQ en función del tiempo. ¿Cuál es la tasa promedio de aumento del EQ por cada 10 millones de años hasta la época actual?
+
+	\item ¿Cuántos años tomará para que el EQ se duplique?
+
+	\item ¿Existe alguna tendencia entre: 
+	\begin{enumerate}
+		\item El EQ y el número de genes en la especie? 
+		\item El EQ y el tamaño de la población de la especie? 
+		\item El EQ y la edad de la especie?
+	\end{enumerate}
+
+	\item Se ha estimado que la tasa promedio de mutación genética en mamíferos es de $2.2 \times 10^{-9} \text{ Mutations / per nucleotide / year}$. 
+	El tamaño promedio del genoma para las especies de mamíferos anteriores es de aproximadamente 3 mil millones, de los cuales el $3\%$ corresponde a genes que codifican proteínas. 
+	\begin{enumerate}
+		\item  ¿Aproximadamente cuántas mutaciones distinguen a una rata de un humano? 
+		\item  ¿Cuántas mutaciones estarían presentes en el material genético?
+	\end{enumerate}
+\end{enumerate}
+
+\section{Determinantes genéticos de la inteligencia de las especies}
+
+La tabla de abajo presenta los genes que han desempeñado un papel en el desarrollo de la inteligencia avanzada en la Tierra. 
+Las mutaciones en cualquiera de estos genes causan problemas conocidos de desarrollo cerebral.
+Para que la evolución en la Tierra condujera a una inteligencia avanzada, tamaños cerebrales más grandes y habilidades de comunicación fueron un requisito básico, 
+además de capacidades para recordar detalles, aprender y emplear habilidades de pensamiento avanzadas. 
+Todos estos atributos fueron posibles gracias a la activación de genes específicos en el genoma mamífero.
+En un mundo alienígena, se asume que genes similares que afectan el alcance y la complejidad de los sistemas nerviosos también desempeñan un papel.
+El genoma mamífero tiene aproximadamente 3 mil millones de nucleótidos de longitud. En los humanos, solo el $3\%$ está en forma de genes que codifican proteínas. 
+El número total de genes mamíferos es de aproximadamente 24 000 para la mayoría de las especies. 
+El significativo aumento en la inteligencia animal ocurrió cuando la Tierra había desarrollado una biosfera con decenas de millones de especies animales.
+Este dramático aumento en la inteligencia ocurrió durante los últimos 50 millones de años (mamíferos avanzados), 
+y más espectacularmente durante el último millón de años (como Homo Sapiens, Homo Neanderthalensis, Homo Heidelbergensis, etc.).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Gen} & \textbf{Tamaño} & \textbf{Funciones} \\
+\hline
+FOX P2       & 607463         & Producción y comprensión del habla \\
+\hline
+Beta Catenin & 23200          & Tamaño del cerebro \\
+\hline
+Pax-6        & 33170          & Formación del ojo \\
+\hline
+Otoferlin    & 101496         & Audición \\
+\hline
+RGS-14       & 14756          & Aprendizaje, memoria \\
+\hline
+SIRT-1       & 33721          & Memoria, aprendizaje, afrontamiento \\
+\hline
+COMT        & 28236          & Habilidades de pensamiento \\
+\hline
+KRTHAP-1     & 6658           & Crecimiento del cabello \\
+\hline
+Myh-16       & 24672          & Tamaño de la mandíbula y volumen del cráneo \\
+\hline
+FGF-5        & 24430          & Longitud del cabello \\
+\hline
+ASPM         & 62568          & Crecimiento de la corteza cerebral \\
+\hline
+MSX-2        & 6328           & Sincronía entre cerebro y cráneo \\
+\hline
+FGFR-3       & 15461          & Crecimiento de cerebro y cráneo \\
+\hline
+TWIST        & 2205           & Crecimiento de cerebro y cráneo \\
+\hline
+DTNBP-1      & 140258         & Resolución de problemas, aprendizaje, comprensión \\
+\hline
+\end{tabular}
+\caption{Genes involucrados en el desarrollo de la inteligencia avanzada en mamíferos.}
+\label{tab:genes_inteligencia}
+\end{table}
+
+\begin{enumerate}
+	\item ¿Qué porcentaje de los genes mamíferos están aparentemente involucrados en sentar las bases para el desarrollo futuro de la inteligencia avanzada?
+
+	\item El número total de especies animales es de aproximadamente 2 millones. ¿Qué porcentaje logró una inteligencia avanzada después de 600 millones de años de evolución?
+
+	\item Explica cómo la competencia interespecífica puede llevar a que, en cualquier momento dado, solo una especie sobreviviente con inteligencia avanzada viva en un planeta.
+\end{enumerate}
+
+\section{Cataclismos Naturales y Evolución de las Especies}
+Los científicos han retomado recientemente la antigua idea de que la evolución de la vida a menudo está determinada por cataclismos naturales. 
+Estos eventos son aleatorios en su naturaleza, pero representan un desafío mayor para las especies que deben sobrevivir a ellos. 
+Muchos no lo logran, como podemos ver en las numerosas \textit{Extinciones Masivas} que han ocurrido. 
+Uno podría preguntarse legítimamente cómo otros sistemas planetarios pueden haber tenido múltiples episodios de origen de la vida, pero algunos cataclismos detuvieron la evolución en su camino.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Cataclysm.jpg}
+        %\caption{}
+        \label{fig:8}
+    \end{figure}
+
+
+Debemos recordar que, en la Tierra, más del $99\%$ de todas las especies que han existido alguna vez están extintas.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Evento} & \textbf{Tiempo (millones de años)} & \textbf{Consecuencia} \\
+\hline
+Erupción Volcánica Toba & 0.07 & Cuello de botella en la evolución humana \\
+\hline
+Calentamiento Global & 55 & Extinción Paleoceno \\
+\hline
+Impacto de Asteroide & 65 & Extinción de los dinosaurios \\
+\hline
+Enfriamiento Global & 205 & Extinciones Triásico-Jurásicas \\
+\hline
+Calentamiento Global & 251 & Extinciones Pérmico-Triásicas \\
+\hline
+Enfriamiento Global & 370 & Extinciones Devónico Tardío \\
+\hline
+Enfriamiento Global & 440 & Extinciones Ordovícicas \\
+\hline
+Anoxia Oceánica & 540 & Extinción Ediacárica Final \\
+\hline
+Enfriamiento Global & 650 & Tierra de Bola de Nieve \\
+\hline
+\end{tabular}
+\caption{Eventos de extinción conocidos o sospechados y sus consecuencias.}
+\label{tab:6}
+\end{table}
+
+Los científicos en su mayoría coinciden en que los \textit{Eventos de Nivel de Extinción} (ELEs) requieren que un asteroide o cometa de gran tamaño colisione con la Tierra, 
+y que sus dimensiones deben ser de al menos 5 kilómetros para generar suficiente energía cinética y afectar gravemente la biosfera global. 
+La Tierra se encuentra cómodamente lejos de la mayor concentración de asteroides en el sistema solar; el Cinturón de Asteroides. 
+Sin embargo, Marte es un planeta potencialmente habitable muy cercano al Cinturón de Asteroides. 
+No es difícil imaginar que Marte reciba muchos más impactos importantes que la Tierra. 
+También existen otras calamidades naturales que pueden causar extinciones, como episodios incrementados de actividad volcánica, 
+generación de calentamiento global o la migración de los continentes que provocan cambios climáticos y ecológicos durante millones de años.
+
+
+\begin{enumerate}
+	\item A partir de la tabla, ¿cuál es aproximadamente el tiempo promedio entre los principales eventos de extinción en la Tierra?
+
+	\item Un asteroide esférico de 10 kilómetros de diámetro choca contra la Tierra a una velocidad de $v = 20000 \m/\s$. 
+	Si el asteroide está hecho de material rocoso, su masa podría ser de $m = 2 \times 10^{15} \kg$. 
+	Si su energía cinética, en $\J$, viene dada por la fórmula
+	$$E_k = \frac{1}{2}mv^2$$
+	y una erupción solar típica produce unos $10^{23} \J$ de energía, 
+	¿cuánta energía libera un impacto de asteroide en comparación con una erupción solar típica?
+\end{enumerate}
+
+\newpage
+\section{Funciones Monstruosas en Ciencia Espacial I}
+Olvida las fórmulas sencillas con las que has jugado antes. Aquí tienes una fórmula razonablemente compleja que tendrás que evaluar, y que involucrará todas las habilidades que has aprendido previamente en álgebra... ¡y también un dominio de la notación científica!
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{MagneticField.png}
+        \caption{Banaszkiewicz, M., Axford, W., \& McKenzie, J. (1998). An analytic solar magnetic field model. Astronomy and Astrophysics, 337, 940–944.}
+        \label{fig:1}
+    \end{figure}
+    
+\begin{equation}
+\frac{B_\rho}{M}=\frac{3\rho z}{r^5} + \frac{15Q}{8}\frac{\rho z}{r^7}\frac{\left(4z^2-3\rho^2\right)}{r^2} +
+ \frac{K}{a_1} \frac{\rho}{\left[(|z|+a_1)^2 + \rho^2\right]^{3/2}}
+\label{eq:1}
+\end{equation}
+
+\begin{equation}
+\frac{B_z}{M} = \frac{2z^2-\rho^2}{r^5} + \frac{3Q}{8}\frac{\left(8z^4+3\rho^4-24\rho^2 z^2\right)}{r^9} + 
+\frac{K}{a_1} \frac{|z|+a_1}{\left[(|z|+a_1)^2+\rho^2\right]^{3/2}}
+\label{eq:2}
+\end{equation}
+
+Estas fórmulas dan las dos componentes del campo magnético solar, en unidades de Gauss, donde $B = B_\rho \rho + B_z z$, siendo $\rho$ y $z$ los vectores unitarios a lo largo de estas dos direcciones.
+
+\begin{enumerate}
+	\item Evalúa las componentes $B_\rho$ y $B_z$ para las siguientes condiciones, apropiadas para una distancia desde el Sol igual a la órbita de la Tierra, utilizando la siguiente información:
+
+    $$r^2 = \rho^2+z^2\quad$$
+    
+    donde
+    \begin{itemize}
+	\item $M = 6.03 \times 10^{17} \km^3$
+    	\item$a_1 = 1.07 \times 10^{6}\km$
+	\item $K=1$
+   	\item $Q = 1.5$
+    	\item $z = -3.48 \times 10^{7} \km$
+    	\item $\rho = 1.46 x 10^8 \km$
+   \end{itemize}
+    
+	\item Encuentra la magnitud del campo magnético utilizando los valores de las dos componentes calculadas en el item 1.
+
+	\item  Explica qué efecto tiene $|z|$ en la representación gráfica del campo magnético.
+\end{enumerate}
+
+\section{Funciones Paramétricas y Sustitución:} Nuestro Sol es una estrella activa que expulsa un flujo constante de partículas al espacio, conocido como el "viento solar". De vez en cuando, la actividad magnética en su superficie también lanza nubes de plasma de rápido movimiento hacia el espacio, llamadas \textit{eyecciones de masa coronal} o CMEs.
+
+Cuando algunas de estas nubes, dirigidas hacia la Tierra, llegan después de recorrer 150 millones de $\km$, causan intensas perturbaciones en el campo magnético terrestre. Desde la década de 1800, estas perturbaciones se han denominado \textit{tormentas magnéticas}, porque los instrumentos en la Tierra pueden medir la intensidad de estas perturbaciones, y estas se asemejan a tormentas en un campo magnético que de otro modo sería muy tranquilo.
+
+Los científicos miden la intensidad de estas tormentas magnéticas en términos del tamaño del cambio que provocan en el campo magnético terrestre. La intensidad del campo magnético terrestre en la superficie es de aproximadamente 0.7 Gauss o 70000 nanoTeslas. Las tormentas magnéticas más intensas pueden cambiar el campo en la superficie en varios por ciento.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{CMEs.jpg}
+        \caption{CMEs: Coronal Mass Ejections}
+        \label{fig:2}
+\end{figure}
+
+Según investigaciones de V. Yurchyshyn, H. Wang y V. Abramenko, publicadas en 2004 en la revista \textit{Space Weather} (vol. 2), la relación entre la perturbación del campo magnético, $\text{Dst}$ (Disturbance Storm Time), y la componente $z$ del campo magnético interestelar, $B_z$, viene dada por:
+
+\begin{equation}
+\text{Dst} = -2.846 + 6.54B_z - 0.118 B_z^2 - 0.002 B_z^3
+\label{eq:1}
+\end{equation}
+
+donde $\text{Dst}$ y $B_z$ se miden en nanoTeslas $\nT$.
+
+En 2004, W. D. Gonzales y sus colegas publicaron un artículo en la \textit{Journal of Atmospheric and Solar Terrestrial Physics}, en el que determinaron una relación entre la velocidad de una eyección de masa coronal solar, $v$, en $\km/\s$, y la intensidad de $\text{Dst}$ en $\nT$ según:
+
+\begin{equation}
+\text{Dst} = 0.00052(0.22v + 340)^2
+\label{eq:2}
+\end{equation}
+
+La relación entre el tiempo de viaje a la Tierra desde el Sol y la velocidad de la CME fue determinada a partir de catálogos de eventos de CME por M. J. Owens y P. J. Cargill en una investigación publicada en 2002 en la \textit{Journal of Geophysical Research} (vol. 107, p. 1050) en términos del tiempo de tránsito en días, $T$, para estas eyecciones de masa coronal y su velocidad, $v$, en $\km/\s$, mediante:
+
+\begin{equation}
+T = -0.0042v + 5.14
+\label{eq:3}
+\end{equation}
+
+También descubrieron que la máxima intensidad del campo magnético interestelar de la CME venía dada por:
+
+\begin{equation}
+B_T = 0.047v + 0.644
+\label{eq:4}
+\end{equation}
+
+\vspace{5mm}
+
+\begin{enumerate}
+	\item A partir de las ecuaciones \eqref{eq:2} y \eqref{eq:3} anteriores, encuentra una función que dé $\text{Dst}$ en términos del tiempo de tránsito de la CME. Escribe el resultado en forma expandida como una ecuación cuadrática.
+
+	\item Suponiendo que $B_z = \frac{B_T}{\sqrt{2}}$, usa las ecuaciones \eqref{eq:1} y \eqref{eq:4} para encontrar una función que dé $\text{Dst}$ en términos de $v$.
+
+	\item A partir de las ecuaciones \eqref{eq:2} y \eqref{eq:4}, encuentra una función que dé Dst en términos de $B_T$.
+\end{enumerate}
+
+
+\section{Algunas Reflexiones Intrigantes sobre la Radiación Espacial:} 
+Todos hemos escuchado, desde la escuela primaria, que la \blank afecta a los sistemas vivos al causar mutaciones celulares. 
+Las partículas, como iones de alta velocidad o \blank, impactan en lugares específicos del \blank de una célula, haciendo que esta funcione mal, o \blank y transmitan un \blank a su descendencia. 
+A veces, las mutaciones no son beneficiosas para un organismo, ni para la evolución de su especie. Cuando esto ocurre, puedes sentirte \blank.
+
+Los riesgos de \blank generalmente están relacionados con la cantidad total de exposición a la radiación durante toda la \blank. 
+Sin embargo, los estudios de los \blank aún muestran que hay mucho que aprender sobre cómo exactamente la radiación ejerce su efecto dañino. 
+\blank muy grandes \blank de radiación administradas en un corto período de tiempo parecen no tener el mismo efecto deletéreo que, por ejemplo, una dosis pequeña administrada constantemente durante muchos años.
+
+La Academia Nacional de Ciencias ha estudiado este tema con bastante cuidado a lo largo de los años para encontrar una relación entre los \blank y la exposición a niveles bajos de radiación. 
+Lo que concluyeron fue que obtienes hasta \blank casos de cáncer por cada \blank por cada \blank adicionales de dosis anual por encima de la tasa de fondo \blank. 
+Si una dosis de \blank \blank extra por año añade \blank muertes adicionales por cada \blank, entonces tan solo un \blank adicional por año podría causar cáncer en una persona por cada \blank. 
+Aunque se trata solo de una estimación \blank, si resulta que eres esa "una persona", comprenderás perfectamente el \blank. 
+Por cierto, ningún estudio científico ha demostrado que la radiación tenga un efecto \blank en todos los niveles por debajo de \blank, pero eso es lo que muestra la \blank de la aritmética.
+
+Las regulaciones gubernamentales de seguridad ahora requieren que las personas que trabajan con radiación, como \blank, tecnólogos de medicina nuclear o operadores de plantas de energía nuclear, reciban un límite máximo permisible de dosis de \blank por año por encima de la tasa de fondo \blank. 
+Para ti y para mí, que realizamos trabajo ordinario en una oficina, fábrica o tienda, la dosis máxima aceptable es de 1000 miliRems/año por encima de los 350 miliRem que recibimos cada año de fuentes naturales. 
+Como comparación, si hubieras vivido dentro de 20 millas de la \blank de energía nuclear \blank en el momento de su \blank, tu dosis anual habría sido de aproximadamente \blank \blank/año durante el primer año, disminuyendo lentamente a medida que los \blank en el entorno decaían.
+
+\textit{Extracto de "The 23rd Cycle", Sten Odenwald, Columbia University Press}
+
+\vspace{5mm}
+
+\begin{enumerate}
+    \item $x^{2} - 2x - 3 = 0$
+    \item $x^{2} + 4x - 5 = 0$
+    \item $x^{2} - 3x + 2 = 0$
+    \item $x^{2} - x - 12 = 0$
+    \item $2x^{2} - 12x + 10 = 0$
+    \item $x^{2} - 2x - 24 = 0$
+    \item $x^{2} + 5x + 6 = 0$
+    \item $x^{2} - 9 = 0$
+    \item $2x^{2} + 4x - 30 = 0$
+    \item $3x^{2} + 3x - 6 = 0$
+    \item $x^{2} - 6x - 16 = 0$
+    \item $x^{2} - 3x - 88 = 0$
+    \item $x^{2} - 4x - 21 = 0$
+    \item $x^{2} - x - 30 = 0$
+    \item $x^{2} - 9x - 36 = 0$
+    \item $x^{2} - 16x + 63 = 0$
+    \item $x^{2} + 16x + 63 = 0$
+    \item $x^{2} + 14x + 48 = 0$
+    \item $x^{2} + 19x + 90 = 0$
+    \item $x^{2} + 8x - 33 = 0$
+    \item $x^{2} - 100 = 0$
+    \item $x^{2} - 8x = 0$
+\end{enumerate}
+
+\vspace{5mm}
+
+\begin{table}[H]
+%\centering
+\begin{tabular}{r l}
+\textbf{Número} & \textbf{Palabra} \\
+\hline
+-11 & planta \\
+-10 & 2005 \\
+-9  & Chernobyl \\
+-8  & millón \\
+-7  & odontólogos \\
+-6  & natural \\
+-5  & neutrones \\
+-4  & cáncer \\
+-3  & dosis \\
+-2  & Hiroshima \\
+-1  & radiación \\
+0   & isótopos \\
+1   & milirems \\
+2   & ADN \\
+3   & vida útil \\
+4   & sobrevivir \\
+5   & mutación \\
+6   & alterado \\
+7   & estadístico \\
+8   & fondo \\
+9   & ciego \\
+10  & 1986 \\
+11  & cien \\
+12  & lineal \\
+\end{tabular}
+\end{table}
+
+\section{SDO revela detalles sobre la superficie del Sol:} El 21 de abril de 2010, el Observatorio de Dinámica Solar (SDO) de la NASA publicó sus muy esperadas imágenes de la "Primera Luz" del Sol.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{SDO.jpeg}
+        %\caption{}
+        \label{fig:1}
+\end{figure}
+
+La imagen anterior muestra una imagen de todo el disco, multilongitud de onda, en ultravioleta extremo del Sol, tomada por el SDO el 30 de marzo de 2010. Los colores falsos indican diferentes temperaturas del gas. El negro indica temperaturas muy bajas, cercanas a los 10000 $\K$, cerca de la superficie solar (fotosfera). Los rojos son plasma relativamente frío (un gas compuesto por átomos que han perdido parte de sus electrones) calentado hasta 60000 Kelvin; los azules, verdes y blancos son plasma más caliente, con temperaturas superiores a 1 millón de Kelvin.
+\begin{enumerate}
+
+	\item El radio del Sol es de 690000 kilómetros. ¿Cuál es la escala de esta imagen en $\km/\mm$?
+
+	\item ¿Cuáles son las características más pequeñas que puedes encontrar en esta imagen, y qué tamaño tienen en kilómetros, en comparación con la Tierra si el radio de la Tierra es de 6378 kilómetros?
+
+	\item ¿Dónde se ubican en esta imagen el gas más frío (agujeros coronales) y el gas más caliente (llamaradas microscópicas)?
+\end{enumerate}
+
+\section{Primer plano de una mancha solar por Hinode} Después de un lanzamiento exitoso el 22 de septiembre de 2006, el observatorio solar Hinode captó una vista parcial de una gran mancha solar el 4 de noviembre de 2006. 
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Sunspot.png}
+        %\caption{}
+        \label{fig:2}
+\end{figure}
+
+Un instrumento llamado Telescopio Óptico Solar (SOT) capturó esta imagen, mostrando detalles de la mancha solar en la superficie solar.
+
+\begin{enumerate}
+	\item Basándose en la distancia entre los puntos de las flechas, ¿cuál es la escala de la imagen de la derecha en unidades de kilómetros por milímetro?
+
+	\item ¿Cuál es el tamaño del detalle más pequeño que puedes ver en la imagen?
+
+	\item Comparado con objetos familiares en la superficie de la Tierra, ¿qué tamaño tendría la característica más pequeña en la imagen solar?
+
+	\item La superficie dorada y texturizada es la fotosfera del Sol. La textura se produce por gas caliente que fluye hacia la superficie desde el interior caliente del Sol. Los gases convectivos forman células, llamadas granulaciones, en la superficie, con gas ascendente proveniente del centro de cada célula, hacia los bordes de la célula, donde se enfría y fluye de vuelta hacia capas más profundas. ¿Cuál es el tamaño promedio de una célula de granulación dentro del cuadrado?
+
+	\item Mide varias células de granulación a diferentes distancias del centro de la mancha solar y grafica el tamaño promedio que obtienes en función de la distancia desde el centro de la mancha. ¿Las células de granulación tienen aproximadamente el mismo tamaño cerca de la mancha solar, o tienden a hacerse más grandes o más pequeñas a medida que te acercas a la mancha solar?
+\end{enumerate}
+
+\section{Energía Cinética y Masa de CMEs (Erupciones de Masa Coronal)}
+La energía cinética es la energía que tiene un cuerpo en virtud de su masa y velocidad. Matemáticamente, se expresa como la mitad del producto de la masa del objeto por el cuadrado de su velocidad:
+
+$$E_k = \frac{1}{2}mv^2$$
+
+Entre octubre de 1996 y mayo de 2006, el satélite SOHO detectó y catalogó 11031 erupciones de masa coronal (CMEs). Hubo suficientes datos disponibles para determinar las propiedades de 2131 eventos. La siguiente tabla proporciona valores para diez de estas CMEs.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Fecha} & \textbf{Velocidad (km/s)} & \textbf{E.C. (Joules)} & \textbf{Masa (kilogramos)} \\
+        \hline
+        4/8/1996   &             & \( 1.1 \times 10^{20} \) & \( 2.2 \times 10^9 \) \\
+        \hline
+        8/22/2000  & 388          & \( 1.3 \times 10^{22} \) & \\
+        \hline
+        6/10/2001  & 731          & \( 8.2 \times 10^{23} \) & \\
+        \hline
+        1/18/2002  & 64           &                         & \( 2.6 \times 10^{10} \) \\
+        \hline
+        5/16/2002  & 1,310        &                         & \( 7.8 \times 10^{10} \) \\
+        \hline
+        10/7/2002  &              & \( 7.8 \times 10^{21} \) & \( 3.0 \times 10^{10} \) \\
+        \hline
+        1/24/2003  & 387          & \( 9.1 \times 10^{18} \) & \\
+        \hline
+        10/31/2003 & 2,198        & \( 1.6 \times 10^{24} \) & \\
+        \hline
+        11/2/2003  &              & \( 9.3 \times 10^{25} \) & \( 4.5 \times 10^{13} \) \\
+        \hline
+        11/10/2004 & 3,387        &                         & \( 9.6 \times 10^{12} \) \\
+        \hline
+    \end{tabular}
+    \caption{Valores medidos de diez CMEs observadas por el satélite SOHO.}
+    \label{tab:CME_data}
+\end{table}
+
+
+\begin{enumerate}
+	\item Complete la tabla determinando el valor de las entradas faltantes usando la fórmula de la Energía Cinética.
+
+	\item ¿Cuál es el rango mínimo y máximo de las energías cinéticas observadas para las 10 CMEs? La bomba de hidrógeno más grande jamás probada fue la Bomba del Zar en 1961 y fue equivalente a 50 megatones de TNT. Tuvo un rendimiento de $ 5 \times 10^{23} \J$. ¿Cuál es el rendimiento equivalente de la CME más grande en megatones y en “Bombas del Zar”?
+
+	\item ¿Cuáles son las masas equivalentes de las CMEs más pequeña y más grande en toneladas métricas?
+
+	\item Compare la masa de la CME más grande con la masa de una montaña pequeña. Suponga que la montaña puede representarse como un cono con un volumen dado por $\frac{1}{3} \pi r^2 h $, donde $r$ es el radio de la base y $h$ es la altura en metros, y suponga que la densidad de la roca es $3 \g / \cm ^3$.
+\end{enumerate}
+
+
+\cite{NASA_BlackHoleMath} \cite{NASA_AstrobiologyMath} \cite{NASA_SpaceMathIII} \cite{NASA_SpaceWeatherMath}
+\bibliographystyle{plainurl}
+\bibliography{bibliografia} % Nombre del .bib
+\end{document}
