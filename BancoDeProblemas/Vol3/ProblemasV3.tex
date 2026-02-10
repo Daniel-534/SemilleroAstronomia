@@ -1,0 +1,526 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{afterpage}
+\usepackage{setspace}
+
+% cabecera
+\pagestyle{fancy}
+\fancyhead[l]{Semillero de Astronomía}
+\fancyhead[c]{Banco de Problemas \#3}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% Comando para espacio vertical
+\newcommand{\vsp}{\vspace{0.5cm}}
+
+%% Definicion de comandos para formato de unidades fisicas %%
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\km}{\text{km}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\g}{\text{g}}
+\newcommand{\kg}{\text{kg}}
+\newcommand{\Msolar}{\text{M}_\odot}
+\newcommand{\Mterrestre}{\text{M}_\oplus}
+\newcommand{\AU}{\text{AU}}
+\newcommand{\ly}{\text{ly}}
+\newcommand{\nT}{\text{nT}}
+\newcommand{\keV}{\text{keV}}
+\newcommand{\MeV}{\text{MeV}}
+\newcommand{\GeV}{\text{GeV}}
+\newcommand{\atoms}{\text{atoms}}
+\newcommand{\K}{\text{K}}
+\newcommand{\J}{\text{J}}
+\newcommand{\particles}{\text{particles}}
+\newcommand{\protones}{\text{p}^+}
+\newcommand{\electrones}{\text{e}^-}
+\newcommand{\Gy}{\text{Gy}}
+\newcommand{\My}{\text{My}}
+\newcommand{\nm}{\text{nm}}
+\newcommand{\blank}{\rule{2cm}{0.4pt}\xspace}
+\newcommand{\mol}{\text{mol}}
+\newcommand{\W}{\text{W}}
+
+
+
+\begin{document}
+
+% Portada
+\begin{titlepage}
+    \centering
+    
+    \vspace*{2cm}
+    
+    % Título principal - color negro normal
+    {\fontsize{36}{40}\selectfont\bfseries BANCO DE PROBLEMAS}
+    
+    \vsp
+    \vsp
+    
+    % Subtítulo
+    {\Large\textbf{Astronomía para las Ciencias Básicas}}
+    
+    \vsp
+    
+    {\large Volumen 3}
+    
+    \vspace{3cm}
+    
+    \rule{0.7\textwidth}{0.4pt}
+    
+    \vspace{2.5cm}
+    
+    {\LARGE\bfseries Institución Educativa}
+    
+    \vsp
+    
+    {\LARGE\bfseries Enrique Olaya Herrera}
+    
+    \vsp
+    
+    {\LARGE\bfseries (IEEOH)}
+    
+    \vspace{2.5cm}
+    
+    {\Large Una iniciativa del:}
+    
+    \vspace{0.8cm}
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{20}{24}\selectfont\bfseries
+        CENTRO DE INTERÉS:}
+        
+        \vspace{0.4cm}
+        
+        {\fontsize{24}{28}\selectfont\bfseries
+        SEMILLERO DE ASTRONOMÍA}
+    \end{minipage}
+    
+    \vfill
+    
+    % Espacio para el autor
+    \vspace{1.5cm}
+    
+    \begin{minipage}{\textwidth}
+        \centering
+        {\large Autor: Daniel Soto} \\
+        \vspace{0.3cm}
+        {\large \today}
+    \end{minipage}
+    
+    \nopagecolor
+    
+\end{titlepage}
+
+\section{Cinturones de Van Allen I}
+Los cinturones de Van Allen fueron descubiertos aproximadamente en 1958 cuando los satélites Explorer 1 y 3, equipados con contadores Geiger, detectaron nubes de \textit{radiactividad} dentro de los $50 000 \km$ de la Tierra. Investigaciones posteriores identificaron finalmente cuatro componentes: dos cinturones internos, compuestos por electrones de alta energía ($\sim100 \keV$) y protones (de $100 \keV$ a $400 \MeV$); un cinturón externo compuesto principalmente por electrones de alta energía (de $0.1$ a $10 \MeV$); y una región generalmente vacía llamada Zona Slot que separa estos dos sistemas de partículas.
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{RadiationBelts.jpeg}
+%        \caption{test}
+        \label{fig:1}
+    \end{figure}
+
+A diferencia de otros sistemas físicos como la atmósfera terrestre al nivel del mar ($1.29 \kg/\m ^3$) o incluso el viento solar ($5 \atoms/\cm ^3$), la densidad de los cinturones de Van Allen no está muy bien definida. El número de partículas presentes en cualquier momento varía órdenes de magnitud dependiendo del tipo de partícula (electrones o protones), sus energías (de $1 \keV$ a $400 \MeV$) y el nivel de actividad solar.
+
+Dos cantidades que pueden medirse son la velocidad promedio de las partículas y su flujo. El flujo es una medida del número de partículas que atraviesan un centímetro cuadrado de superficie cada segundo. Dividir el flujo promedio de partículas entre la velocidad promedio de las partículas proporciona la densidad de las partículas en el espacio. 
+
+Las figuras anteriores muestran los flujos de protones (derecha) y electrones (izquierda), coloreados según sus respectivos flujos. Las partículas más comunes en el cinturón interno consisten en electrones de baja energía (Flujo $\sim 10^6 \frac{\particles}{\cm^2 \cdot \s}$) y protones de alta energía (Flujo $\sim 10^5 \frac{\particles}{\cm^2 \cdot \s}$). En el cinturón externo, predominan principalmente electrones de alta energía (Flujo $\sim 10^5 \frac{\particles}{\cm^2 \cdot \s}$). 
+
+\begin{enumerate}
+	\item Demuestre que, en términos de las unidades de cada una de las cantidades, la Densidad = Flujo / Velocidad.
+	\item Si los electrones ($E = 100 \keV$) y los protones ($E = 10 \MeV$) viajan a velocidades de aproximadamente $1.8 \times 10^{10} \cm/\s$ y $4.4 \times10^9 \cm/\s$ respectivamente, ¿cuál es la densidad promedio de los electrones y protones en el cinturón interno?
+	\item Si los electrones ($E = 1 \MeV$) viajan a velocidades de aproximadamente $2.6\times10^{10} \cm/\s$, ¿cuál es la densidad promedio de los electrones en el cinturón externo?
+\end{enumerate}
+
+
+\section{Cinturones de Van Allen II}
+
+\begin{enumerate}
+	\item  Aproximaremos los volúmenes de los cinturones interno y externo de Van Allen como figuras toroidales centradas en la Tierra. (Un toro se forma al rotar un círculo con un radio $r$ alrededor de un eje $L$ ubicado a una distancia $R$ del centro del círculo). Demuestre que la fórmula para el volumen de un toro, mostrada en la sección transversal anterior, está dada por la fórmula $V = 2\pi^2Rr^2$
+	\item ¿Qué estimaría para el volumen, en metros cúbicos, de 
+	\begin{enumerate}
+		\item El cinturón interno de protones?
+		\item El cinturón interno de electrones?
+		\item El cinturón externo de electrones?
+	\end{enumerate}
+\end{enumerate}
+
+\section{Cinturones de Van Allen III}
+
+\begin{enumerate}
+	\item Para el cinturón interno de protones, la densidad estimada es $N = 2.3 \times 10^{-5} \protones/\cm^3$ . El volumen de este cinturón es aproximadamente $V = 1.1 \times 10^{22}\m^3$. ¿Cuál es aproximadamente la masa de este cinturón en kilogramos?
+	\item Para el cinturón interno de electrones, la densidad estimada es $N = 5.6 \times 10^{-5} \electrones/\cm^3$. El volumen de este cinturón es aproximadamente $V = 1.9 \times 10^{21}m^3$. ¿Cuál es aproximadamente la masa de este cinturón en kilogramos?
+	\item Para el cinturón externo de electrones, la densidad estimada es $N = 3.8 \times 10^{-5} \electrones/\cm^3$. El volumen de este cinturón es aproximadamente $V = 9.7 \times 10^{22}m^3$. ¿Cuál es aproximadamente la masa de este cinturón en kilogramos?
+\end{enumerate}
+
+
+\section{Explosión de Supernova}
+
+Una vez que una estrella explota como supernova, la envoltura en expansión de restos se expande hacia el exterior a velocidades de $10000\ \km / \s$, formando una creciente burbuja de gas que puede observarse mucho tiempo después de ocurrida la explosión.
+
+La imagen abajo muestra el remanente de supernova Cassiopeia-A tal como lo revela el Observatorio de rayos X Chandra.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Cassiopeia_A.jpg}
+        \caption{Cassiopeia-A}
+        \label{Cassiopeia-A}
+    \end{figure}
+
+Una ecuación simple aproxima el radio de la burbuja, $R$, en metros, dada la densidad del gas a través del cual viaja, $N$, en $\atoms/\m^3$, y la energía total, $E$, de la explosión en $\J$:
+
+$$
+R(E, N, t) = 2.4 \times 10^8 \left( \frac{E}{N} \right)^{1/5} t^{\,2/5} \; \m.
+$$
+
+\vspace{5mm}
+
+\begin{enumerate}
+	\item Los astrónomos suelen poder determinar el tamaño de un remanente de supernova y estimar la densidad y la energía, pero desean conocer la edad de la envoltura en expansión. ¿Cuál es la función inversa $t(R, E, N) $ dada la fórmula anterior?
+
+	\item A partir de datos históricos, los astrónomos podrían conocer la edad del remanente de supernova, pero querrían determinar cuánta energía estuvo involucrada en su creación. ¿Cuál es la función inversa $E(R, N, t)$?
+
+	\item El remanente de supernova Cassiopeia-A tiene una edad de unos 500 años y un diámetro de 10 años luz. Si 1 año luz equivale a $9.3 \times 10^{12} \km$, y la densidad media del medio interestelar es $10^6\ \atoms/\m^3$, ¿cuál es la energía involucrada en la explosión de la supernova?
+\end{enumerate}
+
+\section{Agujero Negro, tiempo y materia}
+
+Los agujeros negros se encuentran entre los objetos más peculiares de nuestro universo. Aunque pueden detectarse a grandes distancias, los futuros viajeros que se atrevan a orbitar uno de ellos experimentarán cambios muy peculiares. Examinemos un pequeño agujero negro con la masa de nuestro Sol. Su radio estará definido por el tamaño de su horizonte, que se encuentra a una distancia del centro del agujero negro de $r = 2.8 \km$.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{BlackHoleSpin.jpg}
+        \caption{Una representación artística de la materia que fluye hacia un agujero negro en el centro de un disco de acreción.}
+        \label{BlackHoleSpin}
+    \end{figure}
+
+Un observador distante en la Tierra verá que el reloj llevado por el Viajero comienza a ralentizarse según la fórmula:
+
+$$
+T = \frac{t}{\sqrt{1 - \frac{2.8}{r}}}
+$$
+
+donde $t$ es el tiempo que pasa en el reloj del Viajero y $T$ es el intervalo de tiempo que un Observador distante percibe.
+\begin{enumerate}
+	\item El Observador sabe que el reloj del Viajero marca un tic cada segundo, de modo que \( t = 1.0 \). Encuentre la función inversa $r(T)$ que da la distancia del Viajero, $r$, desde el centro del agujero negro en términos del intervalo de tiempo, $T$, medido por el Observador en la Tierra.
+
+	\item El Observador ve cómo el reloj del Viajero se vuelve cada vez más lento. Si el Observador mide los tics a intervalos de $T = 5 \s, \quad 20 \s, \quad \text{y}\quad 60 \s$, ¿a qué distancia del horizonte de eventos ($R = 2.8 \km$) del agujero negro, en metros, se encuentra el Viajero en cada caso?
+\end{enumerate}
+
+\section{Ondas y velocidad del sonido}
+La velocidad del sonido, $S$ en $\m/\s$, se puede calcular mediante la fórmula:
+
+$$
+S = 108 \sqrt{\frac{T}{m}}
+$$
+
+donde $m$ es la masa molecular promedio del gas en $\g/\mol$, y $T$ es la temperatura del gas en $K$.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{SoundWaves.jpg}
+        \caption{Este esquema, basado en datos del Observatorio Chandra, identifica ondas sonoras que escapan de las cercanías del masivo agujero negro en el centro del cúmulo de galaxias de Perseo. ¡Toma 20 millones de años para que una onda recorra 1 millón de años luz! (Cortesía NASA/Chandra)}
+        \label{SoundWaves}
+    \end{figure}
+
+\vspace{5mm}
+\begin{enumerate}
+	\item ¿Cuál es la función inversa que proporciona la temperatura del gas en términos de su velocidad del sonido $T(S)$?
+
+	\item ¿Cuál es la función inversa que proporciona la composición del gas, $m$, en términos de su velocidad del sonido $m(S)$?
+
+	\item A una temperatura de $300 \K$, la velocidad del sonido se mide en $450 \m/\s$. ¿Cuál es la masa molecular promedio inferida del gas?
+\end{enumerate}
+
+\section{Impactador LCROSS en la Luna}
+
+Después de que un meteorito golpea la superficie de un planeta, los fragmentos de escombros siguen trayectorias parabólicas a medida que vuelven a caer a la superficie. Cuando el impactador LCROSS golpeó la Luna, los escombros formaron una columna de material que alcanzó una altura de 10 kilómetros y regresó a la superficie alrededor del cráter.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{LCROSS.jpg}
+        \caption{Penacho de escombros del LCROSS visto en la sombra oscura de un cráter lunar. (NASA/LRO)}
+        \label{LCROSS}
+    \end{figure}
+
+El tamaño del campo de escombros que rodea el cráter puede estimarse resolviendo una ecuación cuadrática para determinar las propiedades de la trayectoria promedio de los escombros. La ecuación que aproxima la trayectoria promedio de las partículas está dada por:
+
+$$
+H(x) = x - \frac{g}{2v^2}x^2
+$$
+\begin{enumerate}
+	\item La ecuación da la altura, $H(x)$ en metros, de una partícula promedio eyectada a una distancia $x$ del lugar del impacto, donde $v$ es la velocidad de las partículas en metros/segundo y $g$ es la aceleración de la gravedad en la superficie de la Luna en $\m/\s^2$. Factoriza esta ecuación para encontrar sus dos 'raíces', que representan la distancia inicial de eyección desde el centro del cráter de impacto y la distancia final de aterrizaje de las partículas desde el centro del cráter.
+
+	\item ¿A qué distancia del centro del cráter alcanzaron los escombros su altitud máxima?
+
+	\item ¿Cuál fue la altitud máxima de los escombros a lo largo de su trayectoria?
+
+	\item Resuelve esta ecuación parabólica para el caso específico de la eyección de LCROSS, donde $v = 200 \m/\s$ y $g = 2 \m/\s^2$, para determinar:
+	\begin{enumerate}
+		\item El radio máximo del campo de escombros alrededor del cráter
+		\item La altura máxima de la columna de escombros.
+	\end{enumerate}
+\end{enumerate}
+
+
+\section{Impacto de Deep Impact en el cometa Tempel-1}
+Se producen nubes de escombros cuando un proyectil de alta velocidad impacta una luna o un asteroide. La imagen a la izquierda fue tomada por la nave espacial \textit{Deep Impact} segundos después de que su impactador de $370 \kg$ golpeara el núcleo del Cometa Tempel-1 en 2005.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Tempel.jpg}
+        \caption{Penacho de escombros del impacto de \textit{Deep Impact} en el Cometa Tempel-1 (NASA/Deep Impact).}
+        \label{Tempel1}
+    \end{figure}
+
+Una vez en el pico de su trayectoria, algunas de las partículas de escombros caen de nuevo a la superficie. Su altura sobre la superficie, $H(t)$, viene dada por la función:
+
+$$
+H(t) = h_0 - \frac{1}{2}gt^2
+$$
+
+donde $h_0$ es su altitud inicial sobre la superficie en metros, y $g$ es la aceleración de la gravedad en $\m/\s^2$.
+
+\vspace{5mm}
+
+\begin{enumerate}
+    \item El 9 de octubre de 2009, el impactador LCROSS se estrelló contra la superficie de la Luna con una energía equivalente a unas 2 toneladas de TNT, y produjo un cráter de 350 metros de diámetro. Se observó que el penacho de eyección, que contenía una mezcla de roca lunar calentada y agua atrapada, alcanzó una altura de 10 kilómetros. Si la aceleración de la gravedad en la superficie lunar es $1.6\ \mathrm{m}/\mathrm{s}^2$, ¿cuánto tiempo tardaron las partículas más altas del penacho en volver a caer a la superficie lunar?
+
+    \item El 4 de julio de 2005, la nave espacial \textit{Deep Impact} sobrevoló el Cometa Tempel-1 y lanzó un impactador de $370\ \mathrm{kg}$ que golpeó la superficie del cometa a una velocidad de $10\ \mathrm{km}/\mathrm{s}$, con una energía equivalente a unas 5 toneladas de TNT. Se observó un brillante penacho de eyección, compuesto por una mezcla de partículas de polvo y hielo de agua. Aunque la mayoría de las partículas de escombros fueron expulsadas completamente durante el impacto, algunas partículas de movimiento más lento quedaron atrás y finalmente cayeron de nuevo a la superficie del cometa. Si la altitud máxima de las partículas de escombros que regresaban fue de unos 300 metros, ¿cuánto tiempo tardaron en alcanzar la superficie si la aceleración de la gravedad en este pequeño cuerpo era de solo $0.34\ \mathrm{m}/\mathrm{s}^2$?
+\end{enumerate}
+
+\section{Polvo interestelar: Barnard 68}
+Durante más de 100 años, los astrónomos han investigado cómo el polvo interestelar absorbe y refleja la luz de las estrellas. Demasiado polvo hace que las estrellas se desvanezcan y se vuelvan invisibles para los telescopios ópticos.
+
+Los observatorios infrarrojos de la NASA, como WISE y Spitzer, estudian los granos de polvo directamente mediante la radiación infrarroja de "calor" que emiten. La cantidad de radiación térmica depende de la composición química de los granos de polvo y de su reflectividad (llamada albedo). A través de estudios detallados del espectro electromagnético de los granos de polvo, los astrónomos pueden determinar su composición química.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{B68.png}
+        \caption{Comparación óptica e infrarroja de la nube de polvo Barnard 68. Arriba: visible (opaca). Abajo: infrarrojo (casi transparente). (ESA/VLT)}
+        \label{B68}
+    \end{figure}
+
+Las dos imágenes arriba, tomadas con el Very Large Telescope de la Agencia Espacial Europea, muestran la apariencia en el óptico (arriba) y en el infrarrojo (abajo) de la nube de polvo interestelar Barnard 68. Muestran cómo se comportan los granos de polvo en diferentes longitudes de onda. En longitudes de onda visibles, hacen que la nube sea completamente opaca, por lo que las estrellas de fondo distantes no se ven en absoluto. En longitudes de onda infrarrojas, los granos de polvo absorben mucha menos luz infrarroja y la nube es casi transparente.
+
+$$A(m) = c \frac{\left|\frac{m^2-1}{m^2+2}\right|^2}{\mathfrak{I}\left(\frac{1-m^2}{m^2+2}\right)}
+$$
+
+La ecuación anterior es un modelo matemático del albedo de un grano de polvo, $A(m)$, en función de su índice de refracción, $m$, que es un número complejo de la forma $m = a - b i$. El denominador $\mathfrak{I}(\ldots)$ es la 'parte imaginaria' de la cantidad compleja indicada entre paréntesis. A partir de tus conocimientos sobre números complejos y su álgebra, responde las preguntas siguientes.
+\begin{enumerate}
+	\item Un astrónomo utiliza una composición de grano de polvo de grafito puro para la cual $m = 3 - i$. ¿Cuál es el albedo de un grano de polvo de $0.1$ micrones de diámetro a:
+	\begin{enumerate}
+		\item Longitudes de onda ultravioleta de 0.3 micrones ($c = 10.0$)
+		\item A una longitud de onda infrarroja de 1 micrón ($c = 0.1$)
+	\end{enumerate}
+\end{enumerate}
+
+\section{Nebulosa Planetaria}
+
+En 7 mil millones de años, nuestro sol se convertirá en una gigante roja, expulsando su atmósfera como una nebulosa planetaria y dejando atrás su núcleo denso. Este núcleo, de aproximadamente el tamaño de la Tierra, es lo que los astrónomos llaman una enana blanca y, al carecer de la capacidad de crear calor a través de reacciones nucleares, se enfriará de manera constante y se volverá más tenue como remanente estelar.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{CatEye.jpg}
+        \caption{La nebulosa Ojo de Gato (NGC 6543) fotografiada por el Telescopio Espacial Hubble. En su centro hay una joven estrella enana blanca ubicada a 11.000 años luz de la Tierra.}
+        \label{CatEye}
+    \end{figure}
+
+
+
+La luminosidad, $L$, de la enana blanca sol se ha modelado matemáticamente como una función del tiempo, $t$, dando
+
+$$y = \text{Log}_{10}L(t) \quad \text{y} \quad x = \text{Log}_{10}t$$
+
+donde $t$ está en unidades de años y $L$ en múltiplos de la potencia solar actual ($3.8 \times 10^{26}\W$). El dominio de la función es $[+3.8, +10.5]$.
+
+$$y(x) = 0.0026x^5 - 0.1075x^4 + 1.6895x^3 - 12.742x^2 + 45.396x - 59.024$$
+\begin{itemize}
+
+	\item El dominio sobre el cual $y(x)$ se aplica como una aproximación está dado por el intervalo logarítmico $[+3.8, +10.4]$. ¿A qué lapso de años corresponde esto?
+
+	\item Graficar $y(x)$ sobre el dominio establecido usando una calculadora gráfica.
+
+	\item ¿Para qué valores de $t$ en años se cumple que $y=0$, y cómo se interpreta esto físicamente en términos de $L$ y $t$? 
+\end{itemize}
+
+\section{Campo de Higgs}
+
+La búsqueda de una importante partícula teórica llamada Bosón de Higgs está en marcha en el Gran Colisionador de Hadrones, que comenzó a operar el 23 de noviembre de 2009. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Higgs.png}
+        \caption{Representación esquemática del potencial del campo de Higgs}
+        \label{Higgs}
+    \end{figure}
+
+La masa del Bosón de Higgs en realidad no es constante, sino que depende de la cantidad de energía que se utiliza para crearlo. Este comportamiento notable puede describirse mediante las propiedades de la siguiente ecuación:
+
+$$V(x) = 2x^4 - (1 - T^2)x^2 + \frac{1}{8}$$
+
+Esta ecuación describe la energía potencial, $V$, almacenada en el campo que crea el Bosón de Higgs. La variable $x$ es la masa del Bosón de Higgs, y $T$ es la energía de colisión utilizada para crear esta partícula. El campo de Higgs representa una nueva fuerza 'hiperdébil' en la Naturaleza que es más fuerte que la gravedad, pero más débil que la fuerza electromagnética. El Bosón de Higgs es la partícula que transmite el campo de Higgs, así como el fotón es la partícula que transmite el campo electromagnético.
+\begin{enumerate}
+\item Usando una calculadora gráfica, ¿cuál es la forma de la función $V(x)$ sobre el dominio $[0, +1]$ para una energía de colisión de: 
+	\begin{enumerate}
+		\item $T=0$? 
+		\item $T=0.5$? 
+		\item $T = 0.8$ 
+		\item $T=1.0$
+	\end{enumerate}
+	\item La masa del Bosón de Higgs se define por la ubicación del mínimo de $V(x)$ sobre el dominio $[0, +1]$. Si la masa, $M$ en $\GeV$, del Bosón de Higgs se define como $M = 300x$, ¿cómo cambia la masa predicha del Bosón de Higgs a medida que el valor de $T$ aumenta de $0$ a $1$?
+\end{enumerate}
+
+\section{Inflación Cósmica y Materia Oscura}
+
+Un concepto importante en cosmología es que el 'espacio vacío' entre estrellas y galaxias ¡en realidad no está vacío en absoluto! Hoy, la cantidad de energía invisible oculta en el espacio es suficiente para ser detectada como Energía Oscura, a medida que los astrónomos miden la velocidad de expansión del universo. Poco después del Big Bang, esta Energía Oscura causó que el universo se expandiera enormemente en menos de un segundo. Los cosmólogos llaman a este periodo temprano de la era del Big Bang, Inflación Cósmica.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{DarkMatter.jpg}
+        \caption{Ilustación de la materia oscura}
+        \label{DarkMatter}
+    \end{figure}
+
+
+Una propiedad interesante de este nuevo campo de 'energía oscura', cuya energía está representada por la función $V(x)$, es que la forma de esta función cambia a medida que la temperatura del universo cambia. El resultado es que la forma en que este campo, representado por la variable $x$, interactúa con las otras partículas elementales en la naturaleza, cambia. A medida que ocurre este cambio de temperaturas muy altas ($T=1$) a temperaturas muy bajas ($T=0$), ¡el universo experimenta la Inflación Cósmica!
+
+$$V(x) = 2x^4 - (1-T^2)x^2 + \frac{1}{8}$$
+
+\begin{enumerate}
+	\item ¿Cuál es el dominio y rango de la función $V(x)$?
+
+	\item ¿Cuál es el eje de simetría de $V(x)$?
+
+	\item ¿Es $V(x)$ una función par o impar?
+
+	\item  Para $T=0$, ¿cuáles son los puntos críticos de la función en el dominio $[-2, +2]$?
+
+	\item En el dominio $[0, +2]$, ¿dónde se ubican los mínimos y máximos locales para $T=0$?
+
+	\item Usando una calculadora gráfica , grafica $V(x)$ para los valores $T=0, 0.5, 0.8$ y $1.0$ en el dominio $[0, +1]$. 
+	Tabula el valor de x del mínimo local como una función de $T$. 
+	En términos de su ubicación en x, ¿qué crees que le sucede al comportamiento final del mínimo de $V(x)$ en este dominio a medida que $T$ aumenta?
+
+	\item ¿Cuál es la diferencia de energía del vacío $V = V(0) - V(1/2)$ durante la Era de la Inflación Cósmica?
+
+	\item La energía real almacenada en el 'espacio vacío' dada por $V(x)$ tiene unidades físicas de densidad de energía en múltiplos de $10^{35}\J/\m^3$. ¿Cuál es la densidad de energía disponible durante la Era de la Inflación Cósmica en estas unidades físicas?
+\end{enumerate}
+
+
+\section{Modelo matemático del interior del Sol}
+Modelos matemáticos detallados del interior del sol se basan en observaciones astronómicas y en nuestro conocimiento de la física de las estrellas. Estos modelos nos permiten explorar muchos aspectos de cómo 'funciona' el sol que están permanentemente ocultos a la vista.    
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Sun.jpg}
+        \caption{Sol}
+        \label{Sol}
+    \end{figure}
+
+El Modelo Estándar del sol, creado por astrofísicos durante los últimos 50 años, nos permite investigar muchas propiedades por separado. Una de ellas es la densidad del gas caliente en todo el interior. La función a continuación proporciona una fórmula de mejor ajuste, $D(x)$, para la densidad (en $\g/\cm^3$) desde el núcleo ($x=0$) hasta la superficie ($x=1$) y puntos intermedios.
+
+$$D(x) = 519x^4 - 1630x^3 + 1844x^2 - 889x + 155$$
+
+Por ejemplo, en un radio al $30\%$ del camino hacia la superficie, $x = 0.3$ y por lo tanto
+$D(x=0.3) = 14.5 \g/\cm^3$.
+\begin{enumerate}
+	\item ¿Cuál es la densidad estimada del núcleo del sol?
+
+	\item Al $1\%$ más cercano del radio del sol, ¿a qué radio la densidad del sol cae al $50\%$ de su densidad en el núcleo en $x=0$? 
+	
+	\item ¿Cuál es la densidad estimada del sol cerca de su superficie en $x=0.9$ usando esta aproximación polinómica?
+\end{enumerate}
+
+\section{Cohetes Ares-V y Saturn-V}
+
+El cohete Ares-V, que está siendo desarrollado actualmente por la NASA, pesará 3,700 toneladas en el despegue y podrá transportar 75 toneladas de suministros, equipos y hasta 4 astronautas a la luna. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{AresVSaturnV.png}
+        \caption{Ares V y Saturno V}
+        \label{AresVSaturnV}
+    \end{figure}
+
+Como vehículo de lanzamiento de múltiples propósitos, también podrá lanzar cargas útiles científicas complejas y muy pesadas a Marte y más allá. Para hacer esto, los cohetes de la Etapa Central y los Cohetes de Combustible Sólido (SRBs) entregan un empuje combinado de 47 millones de Newtons. Para el cohete, definamos:
+
+$T(t) = \text{empuje en el tiempo t}$
+$m(t) = \text{masa en el tiempo t}$
+$a(t) = \text{aceleración en el tiempo t}$
+
+de modo que:
+
+$a(t) = \frac{T(t)}{m(t)}$
+
+El lanzamiento toma $200$ segundos. Supongamos que en el intervalo de tiempo $[0,200]$, $T(t)$ y $m(t)$ se dan aproximadamente de la siguiente manera:
+
+$$T(x) = 8x^3 - 16x^2 - x^4 + 47$$
+
+$$m(x) = 35 - x^2$$
+
+donde $t = 40x$ 
+
+Donde hemos usado un cambio de variable, de $t$ a $x$ para simplificar la forma de las ecuaciones.
+
+\begin{enumerate}
+	\item Grafica la curva de empuje $T(x)$ y la curva de masa $m(x)$ y encuentra todos los mínimos, máximos y puntos de inflexión en el intervalo $[0, 5]$.
+
+	\item Grafica la curva de aceleración $a(x)$ y encuentra todos los máximos, mínimos y puntos de inflexión en el intervalo $[0, 5]$.
+
+	\item ¿Para qué valor de $x$ la aceleración del cohete será máxima en el intervalo $[0, 5]$? ¿Cuántos segundos después del lanzamiento será esto?
+\end{enumerate}
+
+\section{Potencial de Coleman-Weinberg}
+Desde la década de 1930, los físicos saben que el "vacío" del espacio no está vacío. Contiene partículas y energía que aparecen y desaparecen, y no pueden ser detectadas directamente. Momentos después del Big Bang, esta energía del vacío fue lo suficientemente grande como para que, por sí misma, pudiera hacer que el universo se expandiera billones de veces en tamaño. Los astrónomos llaman a esto Inflación Cosmológica.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{BigBang.png}
+        \caption{Big Bang}
+        \label{BigBang}
+    \end{figure}
+
+
+Varios estudios teóricos del estado de vacío han centrado su atención en una función polinómica:
+
+$$V(x) = \frac{L}{6} x^4 - m^2 x^2$$
+
+Esta función, llamada Potencial de Coleman-Weinberg, permite a los físicos calcular la energía del estado de vacío, $V(x)$, en términos de la masa, $x$, de un nuevo tipo de partícula aún por descubrir llamada el X-Bosón.
+
+\begin{enumerate}
+	\item Factoriza $V(x)$ y determina la ubicación de todas las intersecciones con el eje x para el caso general donde $m$ y $L$ no están especificados.
+
+	\item Para el caso específico de $V(x)$ donde $m=5$ y $L=6$, determina sus intersecciones con el eje x.
+
+	\item Grafica $V(x)$ para $m=5$ y $L=6$ trazando una selección de puntos entre las intersecciones con el eje x.
+
+	\item ¿Cuál es el comportamiento final (end behavior) de $V(x)$ para los valores seleccionados de $m$ y $L$?
+
+	\item Usa una calculadora gráfica para encontrar el máximo relativo y los mínimos relativos para $V(x)$ con $m=5$ y $L=6$.
+\end{enumerate}
+
+
+\cite{algebra2} \cite{RadiationMath}
+\bibliographystyle{plainurl}
+\bibliography{bibliografia} % Nombre del .bib
+\end{document}

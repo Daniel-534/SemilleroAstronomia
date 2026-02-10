@@ -1,0 +1,168 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{parskip}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{afterpage}
+\usepackage{setspace}
+
+% cabecera
+\pagestyle{fancy}
+\fancyhead[l]{Semillero de Astronomía}
+\fancyhead[c]{Banco de Problemas \#1}
+\fancyhead[r]{\today}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+
+% Comando para espacio vertical
+\newcommand{\vsp}{\vspace{0.5cm}}
+
+%% Definicion de comandos para formato de unidades fisicas %%
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\km}{\text{km}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\g}{\text{g}}
+\newcommand{\kg}{\text{kg}}
+\newcommand{\Msolar}{\text{M}_\odot}
+\newcommand{\Mterrestre}{\text{M}_\oplus}
+\newcommand{\AU}{\text{AU}}
+\newcommand{\ly}{\text{ly}}
+\newcommand{\nT}{\text{nT}}
+\newcommand{\keV}{\text{keV}}
+\newcommand{\MeV}{\text{MeV}}
+\newcommand{\GeV}{\text{GeV}}
+\newcommand{\atoms}{\text{atoms}}
+\newcommand{\K}{\text{K}}
+\newcommand{\J}{\text{J}}
+\newcommand{\particles}{\text{particles}}
+\newcommand{\protones}{\text{p}^+}
+\newcommand{\electrones}{\text{e}^-}
+\newcommand{\Gy}{\text{Gy}}
+\newcommand{\My}{\text{My}}
+\newcommand{\nm}{\text{nm}}
+\newcommand{\blank}{\rule{2cm}{0.4pt}\xspace}
+\newcommand{\mol}{\text{mol}}
+\newcommand{\W}{\text{W}}
+
+
+
+\begin{document}
+
+% Portada
+\begin{titlepage}
+    \centering
+    
+    \vspace*{2cm}
+    
+    % Título principal - color negro normal
+    {\fontsize{36}{40}\selectfont\bfseries BANCO DE PROBLEMAS}
+    
+    \vsp
+    \vsp
+    
+    % Subtítulo
+    {\Large\textbf{Astronomía para las Ciencias Básicas}}
+    
+    \vsp
+    
+    {\large Volumen 1}
+    
+    \vspace{3cm}
+    
+    \rule{0.7\textwidth}{0.4pt}
+    
+    \vspace{2.5cm}
+    
+    {\LARGE\bfseries Institución Educativa}
+    
+    \vsp
+    
+    {\LARGE\bfseries Enrique Olaya Herrera}
+    
+    \vsp
+    
+    {\LARGE\bfseries (IEEOH)}
+    
+    \vspace{2.5cm}
+    
+    {\Large Una iniciativa del:}
+    
+    \vspace{0.8cm}
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{20}{24}\selectfont\bfseries
+        CENTRO DE INTERÉS:}
+        
+        \vspace{0.4cm}
+        
+        {\fontsize{24}{28}\selectfont\bfseries
+        SEMILLERO DE ASTRONOMÍA}
+    \end{minipage}
+    
+    \vfill
+    
+    % Espacio para el autor
+    \vspace{1.5cm}
+    
+    \begin{minipage}{\textwidth}
+        \centering
+        {\large Autor: Daniel Soto} \\
+        \vspace{0.3cm}
+        {\large \today}
+    \end{minipage}
+    
+    \nopagecolor
+    
+\end{titlepage}
+
+\section{Campo magnético terrestre}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{EarthMagneticField.png}
+        \caption{Campo magnético de la tierra}
+        \label{EarthMagneticField}
+    \end{figure}
+
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Símbolo & Nombre & Valor \\
+    \hline
+    $c$ & Velocidad de la Luz & $2.9979\times 10^{10} \text{ cm/s}$\\
+    \hline
+    $h$ & Constante de Planck & $6.6262\times 10^{-27} \text{ erg}\cdot \text{s}$\\
+    \hline
+    $m$ & Masa del Electrón & $9.1095\times 10^{-28} \text{ g}$\\
+    \hline
+    $e$ & Carga del Electrón & $4.80325 \times 10^{-10} \text{esu}$\\
+    \hline
+    $G$ & Constante de Gravitación & $6.6732 \times 10^{-8} \text{dyn} \cdot \text{cm}^2 \text{gm}^{-2}$\\
+    \hline
+    $M$ & Masa del Protón & $1.6726 \times 10^{-24} \text{g}$\\
+    \hline
+    \end{tabular}
+    \caption{Constantes físicas}
+    \label{ConstantesFisicas}
+    \end{table}
+
+
+\cite{algebra2}
+\bibliographystyle{plainurl}
+\bibliography{bibliografia} % Nombre del .bib
+\end{document}
