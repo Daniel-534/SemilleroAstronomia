@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\title{Problema T01: Misión Daksha}
+\author{Semillero de Astronomía}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Enunciado}
+
+``Daksha'' es una misión india propuesta que consta de dos satélites, $S_1$ y $S_2$, que orbitan la Tierra en la misma órbita circular de radio $r = 7000$ km, pero con una diferencia de fase de $180^\circ$. Estos satélites observan el universo en el dominio de alta energía (rayos X y rayos $\gamma$). Cada uno de los satélites utiliza varios detectores rectangulares planos.
+
+Para entender cómo localizar una fuente en el cielo, utilizaremos un modelo simplificado. Suponga que $S_1$ tiene solo dos detectores idénticos, $D_1$ y $D_2$, cada uno con un área $A = 0.50$ m$^2$, unidos a un soporte opaco $M$. Los detectores están situados simétricamente alrededor del eje $y$ en planos perpendiculares al plano $x-y$ y forman un ángulo $\alpha = 120^\circ$ entre sí.
+
+\subsection{T01.1}
+Al observar una fuente distante ubicada en el plano $x-y$, el detector $D_1$ registra una potencia $P_1 = 2.70 \times 10^{-10}$ J s$^{-1}$ y el detector $D_2$ registra una potencia $P_2 = 4.70 \times 10^{-10}$ J s$^{-1}$. Estime el ángulo $\eta$ que forma el vector de posición de la fuente con el eje $y$ positivo, considerando positivo el ángulo medido en sentido antihorario.
+
+\subsection{T01.2}
+Considere un único pulso de una fuente distante registrado por ambos satélites ($S_1$ y $S_2$). Los tiempos de los picos registrados son $t_1$ y $t_2$. Si se mide una diferencia de tiempo $t_1 - t_2 = 10.0 \pm 0.1$ ms, determine la fracción $f$ de la esfera celeste donde podría encontrarse la fuente.
+
+\section{Solución}
+
+\subsection{Solución T01.1}
+
+Definimos los vectores unitarios normales a los planos de los detectores $D_1$ y $D_2$:
+$$\hat{n}_1 = \frac{1}{2} \hat{x} + \frac{\sqrt{3}}{2} \hat{y}$$
+$$\hat{n}_2 = -\frac{1}{2} \hat{x} + \frac{\sqrt{3}}{2} \hat{y}$$
+
+Sea $\hat{s} = s_x \hat{x} + s_y \hat{y}$ el vector unitario hacia la fuente y $F$ el flujo de la misma. La potencia recibida es $P = AF (|\hat{s} \cdot \hat{n}|)$:
+$$P_1 = AF \left( \frac{1}{2} s_x + \frac{\sqrt{3}}{2} s_y \right) = 2.70 \times 10^{-10}$$
+$$P_2 = AF \left( -\frac{1}{2} s_x + \frac{\sqrt{3}}{2} s_y \right) = 4.70 \times 10^{-10}$$
+
+Resolviendo para las componentes del vector de dirección:
+$$s_x = \frac{-2.00 \times 10^{-10}}{AF} \quad \text{y} \quad s_y = \frac{7.40 \times 10^{-10}}{\sqrt{3} AF}$$
+
+El ángulo $\eta$ con respecto al eje $y$ positivo se calcula como:
+$$\eta = \tan^{-1} \left( \frac{-s_x}{s_y} \right) = \tan^{-1} \left( \frac{2.00 \times 10^{-10}}{7.40 \times 10^{-10} / \sqrt{3}} \right) = \tan^{-1} \left( \frac{2 \sqrt{3}}{7.4} \right)$$
+$$\eta \approx 25.1^\circ \quad (\text{o } 0.438 \text{ rad})$$
+
+\subsection{Solución T01.2}
+
+La diferencia de tiempo $\Delta t$ implica una diferencia de camino $\Delta d = c \Delta t$. Geométricamente, esta diferencia es $\Delta d = 2r \cos \theta$, donde $\theta$ es el ángulo entre la dirección de la fuente y la línea que une los satélites. Por tanto:
+$$\cos \theta = \frac{c \Delta t}{2r}$$
+
+Dado el rango de incertidumbre $\Delta t \in [9.9, 10.1]$ ms, los ángulos límites son:
+$$\theta_1 = \cos^{-1} \left( \frac{c \times 10.1 \text{ ms}}{2r} \right) \approx 77.51^\circ$$
+$$\theta_2 = \cos^{-1} \left( \frac{c \times 9.9 \text{ ms}}{2r} \right) \approx 77.76^\circ$$
+
+La fuente se encuentra en un anillo de área $2\pi(\cos \theta_1 - \cos \theta_2)$. La fracción $f$ del cielo es:
+$$f = \frac{2\pi(\cos \theta_1 - \cos \theta_2)}{4\pi} = \frac{1}{2} \left( \frac{c \times 10.1 \text{ ms}}{2r} - \frac{c \times 9.9 \text{ ms}}{2r} \right)$$
+$$f = \frac{c \times 0.2 \text{ ms}}{4r} \approx 2.13 \times 10^{-3}$$
+
+\end{document}
