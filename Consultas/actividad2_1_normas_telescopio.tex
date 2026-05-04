@@ -1,0 +1,907 @@
+\documentclass[12pt,oneside]{book}
+
+% -------------------------------------------------
+% PAQUETES
+% -------------------------------------------------
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, skins, breakable}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+% -------------------------------------------------
+% CONFIGURACIÓN VISUAL  (paleta cósmica)
+% -------------------------------------------------
+\definecolor{azulCosmos}{HTML}{1B3A6B}
+\definecolor{azulCielo}{HTML}{2980B9}
+\definecolor{doradoEstrella}{HTML}{D4A017}
+\definecolor{grisClaro}{HTML}{F4F6F8}
+\definecolor{grisTexto}{HTML}{2E2E2E}
+\definecolor{grisSec}{HTML}{6C757D}
+\definecolor{colorConcepto}{HTML}{EBF5FB}
+\definecolor{colorActividad}{HTML}{EAFAF1}
+\definecolor{colorIdea}{HTML}{FEF9E7}
+\definecolor{colorNota}{HTML}{F2F3F4}
+\definecolor{colorCompromiso}{HTML}{EAF0FB}
+\definecolor{colorPeligro}{HTML}{FDEDEC}
+\definecolor{rojoPeligro}{HTML}{C0392B}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azulCosmos,
+    urlcolor=azulCielo,
+    citecolor=azulCosmos,
+    pdftitle={Consulta — Actividad 2.1: Normas de Uso del Telescopio},
+    pdfauthor={Semillero de Astronomía — IEEOH}
+}
+
+\setstretch{1.12}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\setlength{\headheight}{26pt}
+
+% -------------------------------------------------
+% ESTILOS DE TÍTULOS
+% -------------------------------------------------
+\titleformat{\chapter}[display]
+  {\bfseries\Huge\color{azulCosmos}}
+  {\filleft\Large\chaptername\ \thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filright}
+  [\vspace{1ex}\titlerule]
+
+\titleformat{\section}
+  {\bfseries\Large\color{azulCosmos}}
+  {\thesection}{0.7em}{}
+
+\titleformat{\subsection}
+  {\bfseries\large\color{grisTexto}}
+  {\thesubsection}{0.6em}{}
+
+\titleformat{\subsubsection}
+  {\bfseries\normalsize\color{grisTexto}}
+  {\thesubsubsection}{0.5em}{}
+
+% -------------------------------------------------
+% ENCABEZADOS Y PIES
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{grisSec}{\nouppercase{\leftmark}}}
+\fancyhead[R]{\textcolor{grisSec}{Semillero de Astronomía — IEEOH}}
+\fancyfoot[C]{\textcolor{grisSec}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{\color{azulCosmos}\leaders\hrule height \headrulewidth\hfill}}
+
+% -------------------------------------------------
+% ÍNDICE
+% -------------------------------------------------
+\renewcommand{\cftchapfont}{\bfseries\color{azulCosmos}}
+\renewcommand{\cftsecfont}{\color{grisTexto}}
+\renewcommand{\cftchappagefont}{\bfseries\color{azulCosmos}}
+\renewcommand{\cftsecpagefont}{\color{grisTexto}}
+
+% -------------------------------------------------
+% ENTORNOS TCOLORBOX
+% -------------------------------------------------
+
+\newtcolorbox{destacado}{
+  colback=grisClaro,
+  colframe=azulCosmos,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=3mm, right=3mm, top=1.5mm, bottom=1.5mm
+}
+
+\newtcbtheorem[number within=chapter]{concepto}{Concepto}{
+  enhanced,
+  colback=colorConcepto,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{con}
+
+\newtcbtheorem[number within=chapter]{actividad}{Actividad}{
+  enhanced,
+  colback=colorActividad,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{act}
+
+\newtcbtheorem[number within=chapter]{idea}{Idea}{
+  enhanced,
+  colback=colorIdea,
+  colframe=doradoEstrella,
+  coltitle=white,
+  colbacktitle=doradoEstrella,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=doradoEstrella},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{idea}
+
+\newtcbtheorem[number within=chapter]{nota}{Nota}{
+  enhanced,
+  colback=colorNota,
+  colframe=grisSec,
+  coltitle=white,
+  colbacktitle=grisSec,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=grisSec},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.6pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{nota}
+
+\newtcbtheorem[number within=chapter]{compromiso}{Compromiso}{
+  enhanced,
+  colback=colorCompromiso,
+  colframe=azulCielo,
+  coltitle=white,
+  colbacktitle=azulCielo,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCielo},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{comp}
+
+\newtcbtheorem[number within=chapter]{regla}{Regla}{
+  enhanced,
+  colback=grisClaro,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{reg}
+
+% Caja especial de advertencia / peligro
+\newtcbtheorem[number within=chapter]{peligro}{Escenario hipot\'etico}{
+  enhanced,
+  colback=colorPeligro,
+  colframe=rojoPeligro,
+  coltitle=white,
+  colbacktitle=rojoPeligro,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=rojoPeligro},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{pel}
+
+% -------------------------------------------------
+% DATOS DEL DOCUMENTO
+% -------------------------------------------------
+\newcommand{\NombreSemillero}{Semillero de Astronomía}
+\newcommand{\Institucion}{Institución Educativa Enrique Olaya Herrera}
+\newcommand{\Ciudad}{Medellín, Colombia}
+\newcommand{\AsesorPrincipal}{Daniel Soto Villada}
+\newcommand{\CoAsesor}{Gerardo Ríos}
+\newcommand{\TituloDocumento}{Consulta — Actividad~2.1\\[0.4em]Normas de Uso\\[0.2em]del Telescopio}
+
+% -------------------------------------------------
+% DOCUMENTO
+% -------------------------------------------------
+\begin{document}
+\hypersetup{pageanchor=false}
+
+% ---------- PORTADA ----------
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+
+    {\Large\textcolor{grisSec}{\Institucion}\par}
+    \vspace{0.2cm}
+    {\large\textcolor{grisSec}{\Ciudad}\par}
+
+    \vspace{2.0cm}
+
+    {\Huge\bfseries\textcolor{azulCosmos}{\TituloDocumento}\par}
+    \vspace{0.5cm}
+    {\Large\textcolor{grisSec}{Consultas Individuales — Segundo Encuentro}\par}
+
+    \vspace{2.4cm}
+
+    \begin{tcolorbox}[
+        colback=grisClaro,
+        colframe=azulCosmos,
+        boxrule=0.9pt,
+        arc=2mm,
+        width=0.82\textwidth
+    ]
+        \centering
+        {\large\bfseries\textcolor{azulCosmos}{Integrantes}\par}
+        \vspace{0.3cm}
+        {\normalsize Miguel \quad$\cdot$\quad Thomas \quad$\cdot$\quad Kevin\par}
+        \vspace{0.1cm}
+        {\normalsize Isabella \quad$\cdot$\quad Esteban \quad$\cdot$\quad Samuel Angulo\par}
+        \vspace{0.4cm}
+        {\large\bfseries\textcolor{azulCosmos}{Asesores}\par}
+        \vspace{0.2cm}
+        {\large \AsesorPrincipal\ \textcolor{grisSec}{(Director Académico)}\par}
+        \vspace{0.1cm}
+        {\large \CoAsesor\ \textcolor{grisSec}{(Director de Gestión)}\par}
+    \end{tcolorbox}
+
+    \vspace{1.6cm}
+
+    \begin{tcolorbox}[
+        colback=colorIdea,
+        colframe=doradoEstrella,
+        boxrule=0.7pt,
+        arc=2mm,
+        width=0.82\textwidth
+    ]
+        \centering
+        \itshape\large\textcolor{grisTexto}{%
+        ``Un instrumento bien cuidado es un instrumento que siempre estará listo
+        para revelar los secretos del universo.''}
+    \end{tcolorbox}
+
+    \vfill
+    {\large\textcolor{grisSec}{\today}\par}
+    \vspace{0.5cm}
+\end{titlepage}
+
+% ---------- PÁGINAS PRELIMINARES ----------
+\frontmatter
+\tableofcontents
+\clearpage
+
+% ---------- CONTENIDO ----------
+\clearpage
+\hypersetup{pageanchor=true}
+\mainmatter
+
+% ================================================================
+%  CAPÍTULO 1 — Normas de Uso del Telescopio
+% ================================================================
+\chapter{Normas de Uso del Telescopio}
+
+\begin{destacado}
+    \textbf{Actividad:} 2.1 \quad
+    \textbf{Asignación:} Segundo Encuentro (29 de abril de 2026) \quad
+    \textbf{Instrumento:} Telescopio \textit{Decouvir Maksutov-Cassegrain MC~60/700}
+\end{destacado}
+
+\medskip
+
+En el segundo encuentro del semillero se asignó a cada integrante la investigación
+de una norma específica de uso del telescopio. El objetivo es comprender no solo
+\emph{qué} se debe hacer, sino \emph{por qué} esa norma existe, qué riesgo técnico
+o de seguridad previene y qué consecuencias tendría ignorarla. Este documento recoge
+los hallazgos de cada consulta, enriquecidos con ejemplos hipotéticos que ilustran
+de manera concreta los riesgos asociados \cite{suiter1994,thompson2005,rutten1988}.
+
+% ---------------------------------------------------------------
+\section{Miguel — No apuntar al Sol sin filtro solar certificado}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Concentración de radiación solar en un telescopio}{con:solar}
+    Un telescopio no es simplemente un instrumento que \emph{magnifica} la imagen:
+    es, ante todo, un colector de luz. Al apuntar al Sol, toda la radiación que
+    entra por el objetivo se concentra en un punto focal de milímetros de diámetro.
+    Para un telescopio con apertura de 60~mm, la energía solar que llega al ojo
+    o al ocular es entre \textbf{600 y 3\,600 veces} mayor que la que incide sobre
+    el ojo desnudo, dependiendo del modelo óptico \cite{pasachoff2000}. Esta
+    concentración incluye radiación visible, ultravioleta e infrarroja.
+\end{concepto}
+
+\subsection{¿Por qué es importante esta norma?}
+
+La retina humana carece de receptores de dolor. Esto significa que una lesión
+grave puede ocurrir sin ningún aviso previo: \textbf{ni ardor, ni sensación de
+calor, ni señal de alerta}. La concentración de radiación solar a través del
+telescopio puede causar \emph{fotocoagulación retiniana} en milisegundos —~literalmente,
+las proteínas de las células fotorreceptoras se desnaturalizan por calor, del mismo
+modo que la clara de un huevo se coagula \cite{dobson2011}.
+
+Existen dos tipos de filtros solares aptos para observación con telescopio:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Filtros de vidrio óptico solar:} atenúan la luz en un factor
+          de 100\,000:1 o más (densidad óptica $\geq 5$). Deben cumplir las normas
+          ISO~12312-2 para observación directa del Sol \cite{iso12312}.
+    \item \textbf{Película Baader AstroSolar:} lámina de polímero multicapa con
+          densidad óptica 5.0 (versión visual), ampliamente utilizada en astronomía
+          aficionada y recomendada por la comunidad científica \cite{baader2023}.
+\end{itemize}
+
+\begin{nota}{Filtros que NO son válidos}{nota:filtros-invalidos}
+    Lentes de sol convencionales, negativos fotográficos velados, CDs, vidrios
+    ahumados o cualquier improvisación casera \textbf{no son filtros solares seguros}.
+    Pueden bloquear la luz visible pero transmiten radiación infrarroja invisible
+    que igualmente destruye la retina. Solo los filtros certificados bajo estándar
+    ISO garantizan protección completa \cite{pasachoff2000,iso12312}.
+\end{nota}
+
+\subsection{¿Qué riesgo se evita?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Ceguera permanente} por fotocoagulación retiniana: la lesión es
+          irreversible porque las células de la retina no se regeneran.
+    \item \textbf{Daño al ocular}: el calor concentrado puede fundir el cemento óptico
+          de los elementos del ocular y deformar los barriles plásticos o los sellos de goma.
+    \item \textbf{Daño al espejo o al corrector}: en telescopios tipo Maksutov, la
+          lente correctora puede agrietarse por el gradiente térmico extremo.
+\end{itemize}
+
+\begin{peligro}{Una fracción de segundo que lo cambia todo}{pel:solar}
+    \itshape
+    Imaginemos que Miguel, durante una sesión de observación solar en el patio,
+    retira el filtro Baader por \emph{``un segundo''} para ver si realmente es
+    necesario. Al hacerlo, la energía solar concentrada incide directamente sobre
+    su fóvea —~la zona de mayor agudeza visual de la retina. En ese instante,
+    la temperatura local supera los 65\,°C: las células de los conos se desnaturalizan
+    de forma irreversible. Miguel no siente dolor en el momento, pero al día siguiente
+    nota una mancha oscura fija en el centro de su campo visual. El diagnóstico del
+    oftalmólogo confirma una \emph{retinopatía solar} con escotoma central permanente.
+    Nunca más podrá leer con normalidad ni ver detalles finos en astronomía.
+
+    \medskip
+    \normalfont
+    Este escenario, documentado en numerosos casos clínicos tras eclipses solares
+    sin protección adecuada, ilustra por qué esta norma no admite excepciones
+    \cite{dobson2011,pasachoff2000}.
+\end{peligro}
+
+\begin{regla}{Regla de oro para la observación solar}{reg:filtro-solar}
+    El filtro solar se coloca \textbf{siempre antes} de apuntar el telescopio al
+    Sol, y se retira \textbf{siempre después} de apartar el telescopio del Sol.
+    Nunca al revés. El filtro va en el extremo del objetivo (frente del tubo),
+    no en el ocular.
+\end{regla}
+
+% ---------------------------------------------------------------
+\section{Thomas — Aclimatación del telescopio antes de su uso}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Equilibrio térmico y \emph{seeing} interno}{con:aclim}
+    Todo material sólido, incluyendo los espejos y lentes de un telescopio, se
+    expande o contrae al cambiar de temperatura. Cuando un telescopio pasa de un
+    ambiente cálido al exterior nocturno, sus componentes tardan tiempo en alcanzar
+    la temperatura ambiente. Mientras tanto, la diferencia de temperatura entre las
+    superficies ópticas y el aire circundante genera \emph{corrientes de tubo}
+    (turbulencias térmicas internas): capas de aire a distintas densidades que
+    distorsionan la luz como lo hace el asfalto caliente en una carretera \cite{suiter1994}.
+\end{concepto}
+
+\subsection{¿Por qué es importante esta norma?}
+
+En el telescopio \textit{Decouvir Maksutov-Cassegrain}, la lente correctora tipo
+Maksutov tiene varios milímetros de espesor. Esta masa de vidrio actúa como un
+\emph{acumulador térmico}: tarda considerablemente más en equilibrarse que los
+espejos delgados de un Newtoniano equivalente. La aclimatación recomendada es de
+\textbf{20 a 40 minutos} en exteriores antes de iniciar la sesión de observación,
+dependiendo de la diferencia de temperatura \cite{tonkin2007}.
+
+Durante la aclimatación, el telescopio debe permanecer \textbf{descubierto y en
+posición vertical u horizontal}, sin apuntar al cielo todavía, para que el flujo de
+aire natural ventile el interior del tubo de forma homogénea.
+
+\begin{nota}{El efecto en Medellín}{nota:medellin-aclim}
+    En Medellín la diferencia entre la temperatura interior de un aula (alrededor
+    de 22\,°C) y el exterior en horas de madrugada puede alcanzar los 8–12\,°C.
+    Aunque no es la mayor diferencia imaginable, sí es suficiente para generar
+    corrientes de tubo visibles en observaciones planetarias de alto aumento.
+\end{nota}
+
+\subsection{¿Qué riesgo se evita?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Imágenes borrosas o inestables}: las corrientes de tubo hacen
+          que estrellas puntuales parezcan danzar o deformarse.
+    \item \textbf{Frustración del grupo}: sin saber la causa, los estudiantes
+          podrían concluir erróneamente que el telescopio está dañado.
+    \item \textbf{Pérdida de oportunidades astronómicas}: eventos únicos (ocultaciones,
+          conjunciones, pasos de ISS) no esperan a que el equipo se aclimate.
+\end{itemize}
+
+\begin{peligro}{La noche de Saturno que nunca llegó a verse}{pel:aclim}
+    \itshape
+    El semillero planea una observación especial de Saturno en oposición, el mejor
+    momento del año para verlo. Thomas saca el telescopio directamente del casillero
+    del aula (23\,°C) a la terraza del colegio (13\,°C). Entusiasmados, apuntan de
+    inmediato al planeta. A través del ocular de 10~mm ven algo redondo, pero los
+    anillos parecen bordes difusos que tiemblan sin parar; nadie distingue la división
+    de Cassini ni la sombra del planeta sobre los anillos. Frustrante.
+
+    Treinta minutos después, cuando por fin el telescopio se aclimató, la imagen
+    sería perfectamente estable y los anillos estarían claramente separados. Pero
+    la sesión ya terminó porque era hora de regresar al aula. La oposición no se
+    repetirá en casi un año.
+
+    \medskip
+    \normalfont
+    La aclimatación no es un trámite: es el primer paso de toda sesión exitosa.
+    \cite{suiter1994,tonkin2007}
+\end{peligro}
+
+% ---------------------------------------------------------------
+\section{Kevin — Evitar el contacto directo con los elementos ópticos}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Recubrimientos ópticos y contaminación de superficie}{con:optica}
+    Los espejos y lentes de un telescopio poseen \emph{recubrimientos ópticos}:
+    capas delgadas de aluminio, plata o dieléctricas de apenas decenas de nanómetros
+    de espesor, aplicadas al vacío. Estos recubrimientos determinan la reflectividad
+    y transmitancia del instrumento. Una huella dactilar deposita sobre la superficie
+    una mezcla de aceites, sales, aminoácidos y agua con pH ligeramente ácido
+    (alrededor de 5.5), que ataca química y mecánicamente estos recubrimientos de
+    forma progresiva e irreversible si no se limpia con el procedimiento correcto
+    \cite{smith2000}.
+\end{concepto}
+
+\subsection{¿Por qué es importante esta norma?}
+
+Una sola huella dactilar sobre el espejo principal o la lente correctora puede:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Reducir el contraste de la imagen} al dispersar la luz en múltiples
+          direcciones (\emph{scattering}), haciendo que planetas brillantes generen
+          halos difusos.
+    \item \textbf{Degradar el recubrimiento permanentemente}: los ácidos grasos
+          de la piel corroen el aluminio del espejo en horas si el ambiente es húmedo.
+    \item \textbf{Provocar rayones} si se intenta limpiar la huella sin el procedimiento
+          adecuado: un simple pañuelo de tela puede introducir partículas abrasivas que
+          rayan el recubrimiento de manera irreparable.
+\end{itemize}
+
+La única limpieza válida de óptica astronómica es con:
+
+\begin{enumerate}[leftmargin=1.5em]
+    \item Aire comprimido limpio (perabuble o bombín fotográfico) para retirar polvo suelto.
+    \item Hisopo de algodón y alcohol isopropílico $\geq 99\%$ en movimiento espiral
+          desde el centro hacia afuera, con presión mínima \cite{thompson2005}.
+\end{enumerate}
+
+\begin{nota}{Una acción que parece inofensiva}{nota:huella}
+    Tocar la óptica parece algo menor. Sin embargo, en la comunidad astronómica
+    aficionada es uno de los daños más comunes y costosos. Reemplazar el recubrimiento
+    de un espejo primario en un taller especializado puede costar entre \$50 y \$200
+    USD, un valor que fácilmente supera el costo total del telescopio escolar.
+\end{nota}
+
+\subsection{¿Qué riesgo se evita?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item Pérdida de contraste y aparición de halos en las imágenes.
+    \item Corrosión permanente del recubrimiento metálico.
+    \item Rayones si se intenta limpiar incorrectamente.
+    \item Gasto económico de reacondicionamiento o reemplazo del componente óptico.
+\end{itemize}
+
+\begin{peligro}{Cinco huellas, un espejo arruinado}{pel:huellas}
+    \itshape
+    Kevin tiene curiosidad por ver cómo se ve el espejo secundario del Maksutov
+    desde adentro del tubo. Sin pensarlo demasiado, agarra el tubo por la lente
+    correctora para asomarse. Sus cinco dedos dejan huellas sobre la lente.
+    Al darse cuenta, toma un pañuelo de tela y frota para limpiar. El pañuelo
+    arrastra una partícula de polvo microscópica y deja tres rayones de 2~cm sobre
+    el recubrimiento antirreflejo.
+
+    A partir de ese día, todas las observaciones de la Luna muestran un halo difuso
+    alrededor del disco y las estrellas brillantes tienen halos de dispersión
+    visibles. El recubrimiento dañado no se puede restaurar: la lente correctora
+    deberá enviarse a reacondicionamiento o reemplazarse.
+
+    \medskip
+    \normalfont
+    Lección: la óptica astronómica se mira, nunca se toca.
+    \cite{smith2000,thompson2005}
+\end{peligro}
+
+% ---------------------------------------------------------------
+\section{Isabella — Cubrir el objetivo y el ocular cuando el equipo no esté en uso}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Protección de la óptica frente a polvo, humedad y hongos}{con:tapas}
+    Las superficies ópticas de un telescopio son estructuralmente vulnerables a
+    dos agentes ambientales: el \emph{polvo} y la \emph{humedad}. El polvo acumula
+    partículas abrasivas que dañan el recubrimiento en la limpieza posterior.
+    La humedad, especialmente en climas tropicales como el de Medellín, favorece
+    la \emph{condensación} en superficies frías y —~en presencia de esporas
+    presentes en el aire interior de edificios~— el crecimiento de \textbf{hongos
+    ópticos}: colonias microscópicas que digieren literalmente el recubrimiento
+    del vidrio en procesos lentos pero irreversibles \cite{rutten1988,cloudy2019}.
+\end{concepto}
+
+\subsection{¿Por qué es importante esta norma?}
+
+Las tapas del objetivo y del ocular cumplen funciones distintas pero complementarias:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Tapa del objetivo (parte frontal del tubo)}: protege la lente correctora
+          o el espejo primario del polvo en suspensión, insectos, salpicaduras y luz
+          parásita. En el Maksutov, también protege el interior del tubo herméticamente
+          sellado, que no debe ventilarse con el aire húmedo del entorno.
+    \item \textbf{Tapa del ocular (portaocular)}: cuando el telescopio está sin ocular
+          colocado, el portaocular queda expuesto al espejo secundario; polvo y humedad
+          pueden llegar directamente al sistema óptico interno.
+\end{itemize}
+
+\begin{nota}{El clima de Medellín y los hongos ópticos}{nota:hongos}
+    Medellín tiene una humedad relativa promedio del 65–80\%. Los armarios y depósitos
+    escolares pueden superar el 80\% de humedad relativa en temporada de lluvias.
+    En estas condiciones, los \emph{hongos ópticos} (principalmente del género
+    \textit{Penicillium} y \textit{Aspergillus}) pueden colonizar superficies
+    ópticas no protegidas en semanas. Una vez establecidos, son prácticamente
+    imposibles de eliminar sin dañar el recubrimiento \cite{rutten1988}.
+\end{nota}
+
+\subsection{¿Qué riesgo se evita?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item Acumulación de polvo que reduce el brillo de las imágenes.
+    \item Condensación que favorece corrosión y crecimiento fúngico.
+    \item Hongos ópticos que degradan irreversiblemente la transmitancia del vidrio.
+    \item Entrada de insectos o cuerpos extraños al interior del tubo.
+\end{itemize}
+
+\begin{peligro}{Una tarde sin tapas en temporada de lluvias}{pel:hongos}
+    \itshape
+    Isabella termina una sesión de observación terrestre y guarda rápidamente el
+    telescopio en el depósito del colegio, olvidando colocar la tapa del objetivo.
+    Esa tarde empieza una semana de lluvias intensas; el depósito sube al 85\% de
+    humedad relativa. En el transcurso de tres semanas, esporas de \textit{Aspergillus}
+    presentes en el aire se depositan sobre la lente correctora húmeda del Maksutov
+    y germinan.
+
+    Dos meses después, durante una sesión nocturna, el grupo nota que la imagen de
+    la Luna tiene un velo difuso que no existía antes. Al revisar con una linterna,
+    se descubren manchas blanquecinas irregulares sobre la lente: hongos ópticos.
+    El telescopio debe enviarse a un técnico especializado. El diagnóstico: el
+    recubrimiento antirreflejo de la lente correctora necesita tratamiento químico
+    de profundidad y posiblemente reacondicionamiento.
+
+    \medskip
+    \normalfont
+    El costo de las tapas es cero. El costo de ignorarlas puede ser la inutilización
+    del instrumento durante meses. \cite{rutten1988,cloudy2019}
+\end{peligro}
+
+% ---------------------------------------------------------------
+\section{Esteban — No forzar los mecanismos de ajuste del telescopio}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Precisión mecánica y tolerancias en telescopios}{con:mecanica}
+    Un telescopio es un instrumento de \emph{precisión mecánica}: sus mecanismos
+    de enfoque, ajuste de montura y colimación trabajan con tolerancias de décimas
+    de milímetro. El mecanismo helicoide de enfoque de un Maksutov, por ejemplo,
+    mueve la lente correctora —~o el conjunto de espejos~— una distancia controlada
+    por la rosca del helicoide, cuyo paso puede ser de apenas 0.5~mm por vuelta
+    \cite{tonkin2007}. Cualquier fuerza excesiva puede deformar roscas, doblar
+    el porta-oculares o, en el caso de la montura, desalinear el eje óptico de
+    todo el sistema.
+\end{concepto}
+
+\subsection{¿Por qué es importante esta norma?}
+
+Los mecanismos de ajuste pueden «resistirse» por varias razones completamente normales:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Dilatación o contracción térmica}: el metal se expande y contrae
+          al cambiar de temperatura; en la mañana fría una rosca apretada por calor
+          puede parecer atascada. Solución: esperar la aclimatación.
+    \item \textbf{Lubricante envejecido}: las grasas de las roscas se solidifican
+          con el tiempo. Solución: mantenimiento preventivo con grasa de silicona.
+    \item \textbf{Polvo o suciedad en la rosca}: partículas que crean fricción extra.
+          Solución: limpieza con aire comprimido antes de insistir.
+\end{itemize}
+
+\begin{nota}{La colimación: el parámetro óptico más sensible}{nota:colimacion}
+    La \emph{colimación} es la alineación precisa del eje óptico de todos los
+    elementos del telescopio. En el Maksutov-Cassegrain, esta alineación es muy
+    estable gracias al diseño cerrado, pero puede desajustarse si se aplica
+    torsión o impacto a la lente correctora o al tubo \cite{suiter1994}. Un
+    telescopio descolimado produce imágenes astigmáticas: las estrellas en el
+    centro del campo aparecen como elipses o cometas, nunca como puntos.
+\end{nota}
+
+\subsection{¿Qué riesgo se evita?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item Daño al mecanismo de enfoque helicoide (rosca deformada o porta-oculares torcido).
+    \item Descolimación de los espejos por esfuerzo torsional sobre el tubo.
+    \item Daño a la montura alt-azimutal (ejes doblados o tornillos de tensión rotos).
+    \item Inoperabilidad del telescopio, que requeriría reparación técnica especializada.
+\end{itemize}
+
+\begin{peligro}{El enfocador que nunca volvió a funcionar bien}{pel:forzar}
+    \itshape
+    En una sesión matutina, Esteban intenta enfocar la imagen de un edificio lejano.
+    El helicoide de enfoque se siente rígido porque el telescopio todavía no se
+    ha aclimatado y el metal está contraído por la temperatura de la madrugada.
+    Esteban, pensando que está atascado por suciedad, aplica fuerza progresiva
+    con ambas manos. En un momento, siente un «clic» y el enfocador se mueve.
+
+    Lo que Esteban no sabe es que ese «clic» fue el stripped de la primera rosca
+    del helicoide. A partir de ese día, el mecanismo de enfoque tiene juego axial:
+    el tubo interior se tambalea ligeramente al girar, haciendo imposible mantener
+    el enfoque preciso a altos aumentos. La imagen de Júpiter nunca estará del todo
+    nítida. Reparar el helicoide de un Maksutov requiere desensamblar el tubo
+    óptico completo, un trabajo de relojería que ningún aficionado puede hacer en
+    el colegio.
+
+    \medskip
+    \normalfont
+    Si algo no se mueve con suavidad, la respuesta correcta es investigar la causa,
+    no aplicar más fuerza. \cite{tonkin2007,suiter1994}
+\end{peligro}
+
+% ---------------------------------------------------------------
+\section{Samuel Angulo — Funcionamiento del sistema de aumento del telescopio}
+% ---------------------------------------------------------------
+
+\begin{concepto}{Magnificación en telescopios refractores y catadióptricos}{con:aumento}
+    El \emph{aumento} (o magnificación) de un telescopio se define como la relación
+    entre la distancia focal del instrumento y la del ocular utilizado:
+    \[
+        M \;=\; \frac{F_{\text{telescopio}}}{F_{\text{ocular}}}
+    \]
+    donde $F_{\text{telescopio}}$ es la distancia focal del telescopio (en mm) y
+    $F_{\text{ocular}}$ es la distancia focal del ocular (en mm). Para el
+    \emph{Decouvir Maksutov-Cassegrain MC~60/700}, la distancia focal es de
+    aproximadamente 700~mm, con apertura de 60~mm y relación focal $f/11.7$
+    \cite{decouvir2020}.
+\end{concepto}
+
+\subsection{El telescopio Maksutov-Cassegrain: diseño catadióptrico}
+
+El \textit{Decouvir MC~60/700} es un telescopio \textbf{catadióptrico} de diseño
+Maksutov-Cassegrain \cite{rutten1988}. A diferencia de un refractor (solo lentes)
+o un newtoniano (solo espejos), combina ambos elementos:
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Lente correctora de menisco} (en la parte frontal del tubo):
+          una lente cóncava-convexa que corrige las aberraciones del espejo primario
+          esférico y actúa como «tapa» hermética del tubo.
+    \item \textbf{Espejo primario esférico} (en el fondo del tubo): concentra la luz
+          hacia el espejo secundario.
+    \item \textbf{Espejo secundario convexo} (mancha plateada en el centro de la
+          lente correctora): refleja la luz de vuelta por un agujero en el espejo
+          primario hacia el ocular.
+\end{itemize}
+
+Esta disposición «pliega» el camino óptico dentro de un tubo muy compacto,
+logrando una distancia focal de 700~mm en un tubo de apenas $\sim$15~cm de
+longitud. El diseño cerrado también protege los espejos del polvo y la humedad
+de forma inherente \cite{tonkin2007}.
+
+\subsection{Oculares y aumentos disponibles}
+
+Con los oculares más comunes para telescopios de iniciación, los aumentos
+aproximados en el \textit{MC~60/700} serían:
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+\textbf{Ocular (mm)} & \textbf{Aumento ($M$)} & \textbf{Uso recomendado} \\
+\hline
+25 & $700/25 = 28\times$ & Cúmulos, nebulosas, visión panorámica \\
+20 & $700/20 = 35\times$ & Luna completa, campo amplio \\
+12.5 & $700/12.5 = 56\times$ & Cráter lunar, planetas brillantes \\
+10  & $700/10 = 70\times$ & Detalle lunar, bandas de Júpiter \\
+4   & $700/4 = 175\times$ & Límite práctico para 60~mm \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{regla}{Aumento máximo útil para 60~mm de apertura}{reg:max-aum}
+    El aumento máximo \emph{útil} de cualquier telescopio se estima como
+    $M_{\max} \approx 2 \times D$ (donde $D$ es la apertura en milímetros).
+    Para 60~mm de apertura:
+    \[
+        M_{\max} \approx 2 \times 60 = 120\times
+    \]
+    Por encima de este valor, las imágenes se vuelven más grandes pero más
+    difusas —~lo que se llama \emph{magnificación vacía}~— sin revelar más
+    detalle real \cite{suiter1994,rutten1988}. En condiciones de turbulencia
+    atmosférica (\emph{seeing} deficiente), incluso $70\times$ puede ser
+    excesivo.
+\end{regla}
+
+\subsection{¿Qué riesgo se evita al entender el sistema de aumento?}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Frustración y desmotivación} al usar aumentos inadecuados para
+          las condiciones atmosféricas.
+    \item \textbf{Uso incorrecto de la lente de Barlow}: una Barlow $2\times$
+          multiplica el aumento del ocular por dos, lo que puede llevar al aumento
+          vacío si no se calcula correctamente.
+    \item \textbf{Elección incorrecta del ocular} para el objeto de interés: no
+          todos los objetos necesitan el máximo aumento.
+\end{itemize}
+
+\begin{idea}{La regla del «aumento progresivo»}{idea:progresivo}
+    Una buena práctica para cualquier observación es comenzar siempre con el
+    ocular de \emph{menor aumento} (mayor distancia focal), centrar el objeto
+    en el campo visual, y luego aumentar gradualmente hasta encontrar el aumento
+    óptimo para las condiciones de esa noche. Nunca empezar con el máximo aumento
+    \cite{tonkin2007}.
+\end{idea}
+
+\begin{peligro}{Saturno a 175× en una noche de \emph{bad seeing}}{pel:aumento}
+    \itshape
+    Samuel Angulo, emocionado por ver Saturno por primera vez, coloca directamente
+    el ocular de 4~mm (175×) en el telescopio. La imagen que aparece es grande,
+    sí, pero también borrosa, inestable y decepcionante: los anillos se ven como
+    un blob difuso, sin definición. Samuel concluye que el telescopio es de mala
+    calidad y pierde interés.
+
+    Lo que Samuel no sabe es que esa noche el índice de \emph{seeing} es de apenas
+    2/5 por la turbulencia atmosférica. Con el ocular de 20~mm (35×), la imagen de
+    Saturno habría sido pequeña pero perfectamente nítida, con los anillos claramente
+    separados del disco y la división de Cassini casi visible. A 70× también habría
+    sido excelente. Fue el aumento excesivo, no el telescopio, el que arruinó la
+    observación.
+
+    \medskip
+    \normalfont
+    Comprender el sistema de aumento permite calibrar las expectativas y extraer
+    lo mejor del instrumento en cada condición atmosférica. \cite{suiter1994,tonkin2007}
+\end{peligro}
+
+% ---------------------------------------------------------------
+\section{Síntesis: las normas como sistema integrado}
+% ---------------------------------------------------------------
+
+Las seis normas asignadas no son una lista de prohibiciones aisladas: forman un
+\textbf{sistema integrado de buenas prácticas} cuyo objetivo es preservar el
+instrumento y maximizar la calidad de cada sesión de observación.
+
+\begin{actividad}{Principio unificador de las normas de uso}{act:sintesis}
+    Cada norma responde a uno de tres principios fundamentales:
+    \begin{enumerate}[leftmargin=1.5em]
+        \item \textbf{Seguridad personal} (norma de Miguel): proteger la integridad
+              física de los observadores.
+        \item \textbf{Preservación del instrumento} (normas de Kevin, Isabella, Esteban):
+              mantener el telescopio en condiciones óptimas para el máximo tiempo posible.
+        \item \textbf{Calidad de la observación} (normas de Thomas y Samuel): garantizar
+              que cada sesión produzca resultados útiles y satisfactorios.
+    \end{enumerate}
+    Un semillero que internalice estos tres principios estará preparado no solo
+    para usar el \textit{Decouvir MC~60/700}, sino cualquier instrumento óptico
+    que encuentre en su camino.
+\end{actividad}
+
+\begin{compromiso}{Compromisos del semillero con el instrumento}{comp:cuidado}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Nunca apuntar al Sol sin filtro solar certificado ISO~12312-2.
+        \item Aclimatar el telescopio al menos 20 minutos antes de observar.
+        \item Nunca tocar superficies ópticas con los dedos ni con telas no apropiadas.
+        \item Colocar las tapas del objetivo y del ocular al guardar el instrumento.
+        \item Investigar siempre la causa de una resistencia mecánica antes de forzar.
+        \item Usar siempre el ocular de menor aumento primero y aumentar gradualmente.
+    \end{itemize}
+\end{compromiso}
+
+% ---------- BIBLIOGRAFÍA ----------
+\backmatter
+\chapter*{Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{suiter1994}
+Suiter, H.~R. (1994).
+\textit{Star Testing Astronomical Telescopes: A Manual for Optical Evaluation and Adjustment}.
+Willmann-Bell, Richmond, VA.
+
+\bibitem{rutten1988}
+Rutten, R.~A.~M., y van Venrooij, M.~A.~M. (1988).
+\textit{Telescope Optics: Evaluation and Design}.
+Willmann-Bell, Richmond, VA.
+
+\bibitem{thompson2005}
+Thompson, R., y Thompson, B. (2005).
+\textit{Astronomy Hacks: Tips \& Tools for Observing the Night Sky}.
+O'Reilly Media, Sebastopol, CA.
+
+\bibitem{tonkin2007}
+Tonkin, S.~F. (2007).
+\textit{Practical Amateur Spectroscopy}.
+Springer, Londres.
+
+\bibitem{pasachoff2000}
+Pasachoff, J.~M. (2000).
+\textit{A Field Guide to the Stars and Planets} (4.ª ed.).
+Houghton Mifflin, Boston, MA.
+
+\bibitem{smith2000}
+Smith, W.~J. (2000).
+\textit{Modern Optical Engineering: The Design of Optical Systems} (3.ª ed.).
+McGraw-Hill, Nueva York.
+
+\bibitem{dobson2011}
+Dobson, R., y Bhatt, M. (2011).
+Solar retinopathy in amateur astronomers.
+\textit{British Journal of Ophthalmology}, 95(3), 427–428.
+\url{https://doi.org/10.1136/bjo.2010.185330}
+
+\bibitem{iso12312}
+International Organization for Standardization. (2015).
+\textit{ISO 12312-2:2015 — Eye and face protection. Sunglasses and related eyewear.
+Part 2: Filters for direct observation of the Sun}.
+ISO, Ginebra.
+
+\bibitem{decouvir2020}
+Decouvir Optics. (2020).
+\textit{Manual de usuario: Telescopio Maksutov-Cassegrain MC~60/700}.
+Decouvir Optics.
+
+\bibitem{baader2023}
+Baader Planetarium GmbH. (2023).
+\textit{AstroSolar Safety Film — Technical Data Sheet}.
+Baader Planetarium, Mammendorf.
+Recuperado de \url{https://www.baader-planetarium.com/en/baader-astrosolar-film.html}
+
+\bibitem{cloudy2019}
+Cloudy Nights Community Forums. (2019).
+\textit{Fungus on telescope optics: prevention and treatment}.
+Recuperado de \url{https://www.cloudynights.com/topic/fungus-on-optics}
+
+\end{thebibliography}
+
+\end{document}
