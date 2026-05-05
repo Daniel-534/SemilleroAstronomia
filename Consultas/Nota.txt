@@ -1,0 +1,120 @@
+Problema propuesto
+
+Desde la aparición de los Homo sapiens hace aproximadamente 300.000 años, el Sistema Solar ha continuado su órbita alrededor de la Vía Láctea.
+
+Pregunta:
+
+¿Qué fracción de la órbita galáctica ha recorrido el sistema solar desde la aparición de los humanos modernos?
+
+¿A qué distancia en kilómetros equivale ese recorrido?
+
+Y, como reto adicional: si la órbita fuera un círculo, ¿qué ángulo (en grados) ha barrido en ese tiempo?
+
+
+Aquí tienes una colección de problemas diseñados para “aterrizar” esas escalas gigantes usando matemáticas, geometría y física sencillas. Están pensados para que puedas resolverlos con regla de tres, circunferencias, proporciones y conversiones básicas.
+
+---
+
+## 🌌 1. Escalas del sistema solar
+
+**Datos:**
+
+* 1 UA ≈ 150 millones de km
+* Heliosfera: 80–100 UA
+* Nube de Oort: 5.000–100.000 UA
+
+**Preguntas:**
+
+1. Si dibujas la órbita de la Tierra como un círculo de **1 cm de radio**,
+   👉 ¿a qué distancia estaría el borde de la heliosfera en ese dibujo?
+   👉 ¿y el inicio de la Nube de Oort?
+
+2. En ese mismo modelo:
+   👉 ¿qué tan grande sería todo el sistema solar hasta la Nube de Oort en centímetros o metros?
+
+3. Si la Tierra está a 1 UA del **Sol**,
+   👉 ¿cuántas veces más lejos está el borde externo de la Nube de Oort comparado con la Tierra?
+
+---
+
+## 🧊 2. Comparaciones de distancias
+
+4. Si pudieras viajar en línea recta desde el Sol hasta 100.000 UA:
+   👉 ¿cuántos kilómetros recorrerías?
+
+5. Si un avión vuela a 900 km/h:
+   👉 ¿cuánto tardaría en llegar al borde de la heliosfera?
+   👉 ¿y a la parte externa de la Nube de Oort?
+
+6. Si la distancia Tierra–Sol fuera **1 metro**:
+   👉 ¿a qué distancia quedaría el borde de la heliosfera?
+   👉 ¿y la Nube de Oort?
+
+---
+
+## ☄️ 3. Cometas y la Nube de Oort
+
+7. Un cometa viaja desde 100.000 UA hasta el Sol:
+   👉 si su velocidad promedio fuera de 1 km/s, ¿cuánto tiempo tardaría?
+
+8. Si otro cometa recorre solo desde 5.000 UA:
+   👉 ¿cuántas veces menos tiempo tardaría que el anterior?
+
+---
+
+## 🔵 4. Geometría del sistema solar
+
+9. Supón que la Nube de Oort es una esfera de radio 100.000 UA:
+   👉 ¿cuántas veces mayor es su radio comparado con la órbita de la Tierra?
+
+10. Usando la fórmula del volumen de una esfera:
+    👉 ¿cuántas veces mayor es el volumen de la Nube de Oort comparado con una esfera de radio 1 UA?
+
+*(Pista: el volumen crece con el cubo del radio)*
+
+---
+
+## 🚀 5. Velocidad y tiempo
+
+11. La nave **Voyager 1** viaja a unos 60.000 km/h:
+    👉 ¿cuántos años tardaría en recorrer 100 UA?
+    👉 ¿y 100.000 UA?
+
+12. Si la luz tarda 8 minutos en llegar del Sol a la Tierra:
+    👉 ¿cuánto tardaría en llegar al borde de la Nube de Oort?
+
+---
+
+## 🧠 6. Analogías para comprender
+
+13. Si el sistema solar hasta la Nube de Oort fuera del tamaño de un estadio (~100 m):
+    👉 ¿dónde quedaría la órbita de la Tierra?
+
+14. Si reduces todo el sistema solar a una moneda:
+    👉 ¿qué tan lejos estaría la Nube de Oort en esa escala?
+
+15. Si caminaras 1 paso = 1 UA:
+    👉 ¿cuántos pasos necesitas para salir del sistema solar?
+
+---
+
+## 🌍 7. Perspectiva humana
+
+16. Si una persona vive 80 años:
+    👉 ¿cuántas vidas humanas se necesitarían para viajar hasta la Nube de Oort en avión?
+
+17. Si recorres 10 km diarios caminando:
+    👉 ¿cuántos años tardarías en recorrer 1 UA?
+
+---
+
+## 💡 8. Reflexión final (tipo reto)
+
+18. El sistema solar incluye regiones como el **Cinturón de Kuiper** y la **Nube de Oort**:
+    👉 ¿qué nos dice la enorme diferencia de escalas sobre cómo está distribuida la materia en el espacio?
+    👉 ¿está “lleno” o mayormente vacío?
+
+---
+
+Si quieres, puedo tomar 2 o 3 de estos problemas y resolverlos contigo paso a paso para que veas los números reales (y lo absurdamente grandes que son).
+
