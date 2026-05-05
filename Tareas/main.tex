@@ -1,3 +1,7 @@
+% ================================================================
+%  TAREAS — Semillero de Astronomía
+%  Institución Educativa Enrique Olaya Herrera — Medellín
+% ================================================================
 \documentclass[12pt,oneside]{book}
 
 % -------------------------------------------------
@@ -26,9 +30,9 @@
 % -------------------------------------------------
 % CONFIGURACIÓN VISUAL  (paleta cósmica)
 % -------------------------------------------------
-\definecolor{azulCosmos}{HTML}{1B3A6B}   % azul profundo — color principal
-\definecolor{azulCielo}{HTML}{2980B9}    % azul cielo    — acento secundario
-\definecolor{doradoEstrella}{HTML}{D4A017}% dorado        — detalles especiales
+\definecolor{azulCosmos}{HTML}{1B3A6B}
+\definecolor{azulCielo}{HTML}{2980B9}
+\definecolor{doradoEstrella}{HTML}{D4A017}
 \definecolor{grisClaro}{HTML}{F4F6F8}
 \definecolor{grisTexto}{HTML}{2E2E2E}
 \definecolor{grisSec}{HTML}{6C757D}
@@ -43,7 +47,7 @@
     linkcolor=azulCosmos,
     urlcolor=azulCielo,
     citecolor=azulCosmos,
-    pdftitle={Bitácora del Semillero de Astronomía},
+    pdftitle={Tareas — Semillero de Astronomía},
     pdfauthor={Daniel Soto Villada}
 }
 
@@ -199,24 +203,6 @@
   description delimiters={(}{)}
 }{comp}
 
-% Regla
-\newtcbtheorem[number within=chapter]{regla}{Regla}{
-  enhanced,
-  colback=grisClaro,
-  colframe=azulCosmos,
-  coltitle=white,
-  colbacktitle=azulCosmos,
-  attach boxed title to top left={yshift=-2mm, xshift=4mm},
-  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
-  fonttitle=\bfseries,
-  breakable,
-  arc=1.5mm,
-  boxrule=0.8pt,
-  left=4mm, right=4mm, top=5mm, bottom=2mm,
-  separator sign none,
-  description delimiters={(}{)}
-}{reg}
-
 % -------------------------------------------------
 % DATOS DEL DOCUMENTO
 % -------------------------------------------------
@@ -225,7 +211,7 @@
 \newcommand{\Ciudad}{Medellín, Colombia}
 \newcommand{\AsesorPrincipal}{Daniel Soto Villada}
 \newcommand{\CoAsesor}{Gerardo Ríos}
-\newcommand{\TituloDocumento}{Bitácora del\\[0.4em]Semillero de Astronomía}
+\newcommand{\TituloDocumento}{Tareas del\\[0.4em]Semillero de Astronomía}
 
 % -------------------------------------------------
 % DOCUMENTO
@@ -246,7 +232,7 @@
 
     {\Huge\bfseries\textcolor{azulCosmos}{\TituloDocumento}\par}
     \vspace{0.5cm}
-    {\Large\textcolor{grisSec}{Registro de Encuentros y Actividades}\par}
+    {\Large\textcolor{grisSec}{Problemas y Ejercicios de Astronomía}\par}
 
     \vspace{2.4cm}
 
@@ -276,7 +262,9 @@
     ]
         \centering
         \itshape\large\textcolor{grisTexto}{%
-        ``El universo es un libro que nunca termina de leerse.''}
+        ``La astronomía compele al alma a mirar hacia arriba y nos lleva\\
+        de este mundo a otro.''}\\[0.4em]
+        \normalsize\textcolor{grisSec}{--- Platón}
     \end{tcolorbox}
 
     \vfill
@@ -293,12 +281,11 @@
 \clearpage
 \hypersetup{pageanchor=true}
 \mainmatter
-\input{Clases/clase01}
-\input{Clases/clase02}
-\input{Clases/clase03}
+\input{Tareas/tarea01}
 
-% ---------- FUTURAS CLASES (se irán agregando aquí) ----------
-% \input{Clases/clase04}
+% ---------- FUTURAS TAREAS (se irán agregando aquí) ----------
+% \input{Tareas/tarea02}
+% \input{Tareas/tarea03}
 % ...
 
 \end{document}
