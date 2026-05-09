@@ -149,6 +149,42 @@
   description delimiters={(}{)}
 }{act}
 
+% Problema
+\newtcbtheorem[number within=chapter]{problema}{Problema}{
+  enhanced,
+  colback=white,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{prob}
+
+% Solución paso a paso
+\newtcbtheorem[number within=chapter]{solucion}{Solución}{
+  enhanced,
+  colback=colorActividad,
+  colframe=azulCielo,
+  coltitle=white,
+  colbacktitle=azulCielo,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCielo},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{sol}
+
 % Idea / Propuesta
 \newtcbtheorem[number within=chapter]{idea}{Idea}{
   enhanced,
@@ -281,7 +317,130 @@
 \clearpage
 \hypersetup{pageanchor=true}
 \mainmatter
-\input{Tareas/tarea01}
+\chapter{Tarea 1 — Sistema Solar (resuelta)}
+
+\begin{destacado}
+Este documento fue reorganizado para una lectura más clara:
+cada \textbf{Problema} está seguido inmediatamente por su
+\textbf{Solución paso a paso}.
+\end{destacado}
+
+\section{Órbita del Sistema Solar y escala humana}
+
+\begin{problema}{Fracción de órbita recorrida por la humanidad}{prob:orbita-humana}
+Desde la aparición de los \textit{Homo sapiens} (aprox. $300\,000$ años):
+\begin{itemize}[leftmargin=1.5em]
+  \item el Sistema Solar tarda $230$ millones de años en completar una órbita galáctica;
+  \item su velocidad orbital promedio es $828\,000\ \mathrm{km/h}$.
+\end{itemize}
+Calcular:
+\begin{enumerate}[leftmargin=1.5em, label=\alph*)]
+  \item fracción de órbita recorrida;
+  \item distancia recorrida en kilómetros;
+  \item ángulo barrido (en grados), asumiendo órbita circular.
+\end{enumerate}
+\end{problema}
+
+\begin{solucion}{Paso a paso}{sol:orbita-humana}
+\textbf{1) Fracción de órbita}
+\[
+f=\frac{300\,000}{230\,000\,000}=1.304\times 10^{-3}
+\]
+Esto equivale a:
+\[
+f\cdot 100=0.1304\%
+\]
+
+\textbf{2) Distancia recorrida}
+\[
+t=300\,000\ \text{años}\times 365.25\ \frac{\text{días}}{\text{año}}\times 24\ \frac{\text{h}}{\text{día}}
+=2.6298\times 10^{9}\ \text{h}
+\]
+\[
+d=v\,t=(828\,000\ \mathrm{km/h})(2.6298\times10^9\ \mathrm{h})
+\approx 2.18\times10^{15}\ \mathrm{km}
+\]
+
+\textbf{3) Ángulo barrido}
+\[
+\theta=f\cdot 360^\circ=(1.304\times10^{-3})(360^\circ)\approx 0.47^\circ
+\]
+
+\textbf{Resultado final:} en el tiempo de existencia humana moderna, el Sistema Solar
+ha recorrido cerca de \textbf{0.13\%} de su órbita galáctica, una distancia aproximada
+de \(\mathbf{2.18\times10^{15}}\) km, y un ángulo de \(\mathbf{0.47^\circ}\).
+\end{solucion}
+
+\section{Escalas de distancia en el Sistema Solar}
+
+\begin{problema}{Escala y tiempos de viaje}{prob:escala-viaje}
+Usar:
+\[
+1\ \mathrm{AU}\approx 150\times 10^6\ \mathrm{km}
+\]
+y la escala:
+\[
+1\ \mathrm{AU}\longleftrightarrow 1\ \mathrm{cm}
+\]
+Calcular:
+\begin{enumerate}[leftmargin=1.5em, label=\alph*)]
+  \item distancia en la maqueta para Neptuno (\(30.1\ \mathrm{AU}\)),
+        Heliosfera (\(80\) a \(100\ \mathrm{AU}\)),
+        inicio de Nube de Oort (\(5\,000\ \mathrm{AU}\))
+        y borde externo (\(100\,000\ \mathrm{AU}\));
+  \item tiempo de viaje a \(900\ \mathrm{km/h}\) para llegar a
+        la Luna (\(384\,400\ \mathrm{km}\)),
+        Neptuno (\(\approx 30\ \mathrm{AU}\)),
+        Heliosfera (\(100\ \mathrm{AU}\))
+        y borde externo de la Nube de Oort (\(100\,000\ \mathrm{AU}\)).
+\end{enumerate}
+\end{problema}
+
+\begin{solucion}{Paso a paso}{sol:escala-viaje}
+\textbf{1) Distancias en la maqueta (\(1\ \mathrm{AU}=1\ \mathrm{cm}\))}
+\begin{itemize}[leftmargin=1.5em]
+  \item Neptuno: \(30.1\ \mathrm{AU}\Rightarrow 30.1\ \mathrm{cm}\).
+  \item Heliosfera: \(80\) a \(100\ \mathrm{AU}\Rightarrow 80\) a \(100\ \mathrm{cm}\) (\(0.8\) a \(1\ \mathrm{m}\)).
+  \item Inicio Nube de Oort: \(5\,000\ \mathrm{AU}\Rightarrow 5\,000\ \mathrm{cm}=50\ \mathrm{m}\).
+  \item Borde externo Nube de Oort: \(100\,000\ \mathrm{AU}\Rightarrow 100\,000\ \mathrm{cm}=1\,000\ \mathrm{m}=1\ \mathrm{km}\).
+\end{itemize}
+
+\textbf{2) Tiempos de viaje a \(900\ \mathrm{km/h}\)}
+\[
+t=\frac{d}{v}
+\]
+\begin{itemize}[leftmargin=1.5em]
+  \item Luna:
+  \[
+  t=\frac{384\,400}{900}=427.1\ \mathrm{h}\approx 17.8\ \text{días}
+  \]
+  \item Neptuno (\(\approx 30\ \mathrm{AU}\)):
+  \[
+  d\approx 30(150\times10^6)=4.5\times10^9\ \mathrm{km}
+  \]
+  \[
+  t=\frac{4.5\times10^9}{900}=5.0\times10^6\ \mathrm{h}\approx 570\ \text{años}
+  \]
+  \item Heliosfera (\(100\ \mathrm{AU}\)):
+  \[
+  d=100(150\times10^6)=1.5\times10^{10}\ \mathrm{km}
+  \]
+  \[
+  t=\frac{1.5\times10^{10}}{900}=1.67\times10^7\ \mathrm{h}\approx 1\,900\ \text{años}
+  \]
+  \item Borde externo Nube de Oort (\(100\,000\ \mathrm{AU}\)):
+  \[
+  d=100\,000(150\times10^6)=1.5\times10^{13}\ \mathrm{km}
+  \]
+  \[
+  t=\frac{1.5\times10^{13}}{900}=1.67\times10^{10}\ \mathrm{h}\approx 1.9\times10^6\ \text{años}
+  \]
+\end{itemize}
+
+\textbf{Resultado final:} la maqueta muestra una enorme diferencia de escalas
+(de centímetros a kilómetros), y los tiempos de viaje con tecnología convencional
+se vuelven rápidamente inabordables fuera del entorno planetario cercano.
+\end{solucion}
 
 % ---------- FUTURAS TAREAS (se irán agregando aquí) ----------
 % \input{Tareas/tarea02}
