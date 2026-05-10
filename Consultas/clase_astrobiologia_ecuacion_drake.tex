@@ -1,0 +1,386 @@
+\documentclass[12pt,oneside]{book}
+
+% -------------------------------------------------
+% PAQUETES
+% -------------------------------------------------
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, skins, breakable}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+% -------------------------------------------------
+% CONFIGURACIÓN VISUAL
+% -------------------------------------------------
+\definecolor{azulCosmos}{HTML}{1B3A6B}
+\definecolor{azulCielo}{HTML}{2980B9}
+\definecolor{doradoEstrella}{HTML}{D4A017}
+\definecolor{grisClaro}{HTML}{F4F6F8}
+\definecolor{grisTexto}{HTML}{2E2E2E}
+\definecolor{grisSec}{HTML}{6C757D}
+\definecolor{colorConcepto}{HTML}{EBF5FB}
+\definecolor{colorActividad}{HTML}{EAFAF1}
+\definecolor{colorIdea}{HTML}{FEF9E7}
+\definecolor{colorNota}{HTML}{F2F3F4}
+\definecolor{colorCompromiso}{HTML}{EAF0FB}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=azulCosmos,
+    urlcolor=azulCielo,
+    citecolor=azulCosmos,
+    pdftitle={Clase de Astrobiología: Ecuación de Drake},
+    pdfauthor={Semillero de Astronomía — IEEOH}
+}
+
+\setstretch{1.12}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\setlength{\headheight}{26pt}
+
+% -------------------------------------------------
+% ESTILOS
+% -------------------------------------------------
+\titleformat{\chapter}[display]
+  {\bfseries\Huge\color{azulCosmos}}
+  {\filleft\Large\chaptername\ \thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filright}
+  [\vspace{1ex}\titlerule]
+
+\titleformat{\section}
+  {\bfseries\Large\color{azulCosmos}}
+  {\thesection}{0.7em}{}
+
+\titleformat{\subsection}
+  {\bfseries\large\color{grisTexto}}
+  {\thesubsection}{0.6em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{grisSec}{\nouppercase{\leftmark}}}
+\fancyhead[R]{\textcolor{grisSec}{Semillero de Astronomía — IEEOH}}
+\fancyfoot[C]{\textcolor{grisSec}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+  \hbox to\headwidth{\color{azulCosmos}\leaders\hrule height \headrulewidth\hfill}}
+
+\renewcommand{\cftchapfont}{\bfseries\color{azulCosmos}}
+\renewcommand{\cftsecfont}{\color{grisTexto}}
+\renewcommand{\cftchappagefont}{\bfseries\color{azulCosmos}}
+\renewcommand{\cftsecpagefont}{\color{grisTexto}}
+
+% -------------------------------------------------
+% ENTORNOS
+% -------------------------------------------------
+\newtcolorbox{destacado}{
+  colback=grisClaro,
+  colframe=azulCosmos,
+  boxrule=0.8pt,
+  arc=2mm,
+  left=3mm, right=3mm, top=1.5mm, bottom=1.5mm
+}
+
+\newtcbtheorem[number within=chapter]{concepto}{Concepto}{
+  enhanced,
+  colback=colorConcepto,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{con}
+
+\newtcbtheorem[number within=chapter]{actividad}{Actividad}{
+  enhanced,
+  colback=colorActividad,
+  colframe=azulCosmos,
+  coltitle=white,
+  colbacktitle=azulCosmos,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCosmos},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{act}
+
+\newtcbtheorem[number within=chapter]{idea}{Idea}{
+  enhanced,
+  colback=colorIdea,
+  colframe=doradoEstrella,
+  coltitle=white,
+  colbacktitle=doradoEstrella,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=doradoEstrella},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{idea}
+
+\newtcbtheorem[number within=chapter]{nota}{Nota}{
+  enhanced,
+  colback=colorNota,
+  colframe=grisSec,
+  coltitle=white,
+  colbacktitle=grisSec,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=grisSec},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.6pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{nota}
+
+\newtcbtheorem[number within=chapter]{compromiso}{Compromiso}{
+  enhanced,
+  colback=colorCompromiso,
+  colframe=azulCielo,
+  coltitle=white,
+  colbacktitle=azulCielo,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={enhanced, arc=1mm, boxrule=0pt, colframe=azulCielo},
+  fonttitle=\bfseries,
+  breakable,
+  arc=1.5mm,
+  boxrule=0.8pt,
+  left=4mm, right=4mm, top=5mm, bottom=2mm,
+  separator sign none,
+  description delimiters={(}{)}
+}{comp}
+
+% -------------------------------------------------
+% DATOS
+% -------------------------------------------------
+\newcommand{\NombreSemillero}{Semillero de Astronomía}
+\newcommand{\Institucion}{Institución Educativa Enrique Olaya Herrera}
+\newcommand{\Ciudad}{Medellín, Colombia}
+\newcommand{\AsesorPrincipal}{Daniel Soto Villada}
+\newcommand{\CoAsesor}{Gerardo Ríos}
+\newcommand{\TituloDocumento}{Clase de Astrobiología\\[0.4em]Ecuación de Drake}
+
+% -------------------------------------------------
+% DOCUMENTO
+% -------------------------------------------------
+\begin{document}
+\hypersetup{pageanchor=false}
+
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+    {\Large\textcolor{grisSec}{\Institucion}\par}
+    \vspace{0.2cm}
+    {\large\textcolor{grisSec}{\Ciudad}\par}
+
+    \vspace{2.0cm}
+    {\Huge\bfseries\textcolor{azulCosmos}{\TituloDocumento}\par}
+    \vspace{0.5cm}
+    {\Large\textcolor{grisSec}{Semillero de Astronomía}\par}
+
+    \vspace{2.2cm}
+    \begin{tcolorbox}[colback=grisClaro,colframe=azulCosmos,boxrule=0.9pt,arc=2mm,width=0.82\textwidth]
+        \centering
+        {\large\bfseries\textcolor{azulCosmos}{Asesor Principal}\par}
+        \vspace{0.2cm}
+        {\large \AsesorPrincipal\par}
+        \vspace{0.4cm}
+        {\large\bfseries\textcolor{azulCosmos}{Co-Asesor}\par}
+        \vspace{0.2cm}
+        {\large \CoAsesor\par}
+    \end{tcolorbox}
+
+    \vfill
+    {\large\textcolor{grisSec}{\today}\par}
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+\hypersetup{pageanchor=true}
+
+\chapter{Astrobiología y la ecuación de Drake}
+
+\begin{destacado}
+    \textbf{Propósito de la clase:} comprender la ecuación de Drake como herramienta de pensamiento científico para discutir la posibilidad de vida inteligente en la galaxia, reconociendo sus límites e implicaciones actuales \cite{baak2026implicationspessimisticlowerlimit,cite-key}.
+\end{destacado}
+
+\section{¿Qué es la astrobiología y por qué usar la ecuación de Drake?}
+
+La astrobiología estudia el origen, evolución, distribución y futuro de la vida en el universo. Esto incluye química prebiótica, habitabilidad planetaria, evolución biológica, geología planetaria, radioastronomía y ciencias de datos. La ecuación de Drake no \emph{demuestra} que exista vida inteligente, pero organiza de forma cuantitativa una gran pregunta: \textit{¿cuántas civilizaciones tecnológicas podrían coexistir hoy en la Vía Láctea?}
+
+\begin{concepto}{Ecuación de Drake como modelo de factores}{con:drake}
+La forma clásica de la ecuación es:
+\[
+N = R_* \, f_p \, n_e \, f_l \, f_i \, f_c \, L
+\]
+donde:
+\begin{itemize}[leftmargin=1.5em]
+    \item $R_*$: tasa de formación de estrellas apropiadas en la galaxia.
+    \item $f_p$: fracción de esas estrellas con sistemas planetarios.
+    \item $n_e$: número medio de planetas potencialmente habitables por sistema.
+    \item $f_l$: fracción de planetas habitables donde aparece vida.
+    \item $f_i$: fracción de planetas con vida donde surge inteligencia.
+    \item $f_c$: fracción de civilizaciones inteligentes que desarrollan comunicación detectable.
+    \item $L$: tiempo promedio (años) durante el cual una civilización emite señales detectables.
+\end{itemize}
+\end{concepto}
+
+\section{Lectura moderna: optimismo, pesimismo y paradoja de Fermi}
+
+El punto crítico en la discusión contemporánea es la enorme incertidumbre de los factores biológicos y sociotecnológicos. Estudios recientes resaltan que, incluso con supuestos astronómicos favorables, basta que algunos factores sean muy pequeños para que $N$ se reduzca drásticamente \cite{baak2026implicationspessimisticlowerlimit}.
+
+\begin{nota}{Relación con la paradoja de Fermi}{nota:fermi}
+Si muchas civilizaciones deberían existir, ¿por qué no las observamos? Esta tensión entre expectativa teórica y ausencia de evidencia observacional se conoce como paradoja de Fermi. Una posible respuesta es que algunos factores de la ecuación (por ejemplo $f_i$, $f_c$ o $L$) pueden ser extremadamente bajos.
+\end{nota}
+
+Además, se propone ampliar la ecuación incorporando restricciones geofísicas para vida compleja, como la coexistencia de continentes y océanos, y tectónica de placas sostenida en escalas geológicas \cite{cite-key}. Bajo esa visión, no basta con estar en zona habitable: también importan condiciones planetarias de larga duración.
+
+\section{Interpretación detallada de cada término}
+
+\subsection{$R_*$: formación estelar}
+Este factor ha mejorado gracias a observaciones galácticas. Suele tratarse como relativamente mejor conocido que los factores biológicos. No obstante, no todas las estrellas son igual de favorables para estabilidad climática planetaria.
+
+\subsection{$f_p$ y $n_e$: arquitectura planetaria}
+Con descubrimientos de exoplanetas, hoy se sabe que los sistemas planetarios son comunes. El reto no es encontrar planetas, sino caracterizar cuáles mantienen agua líquida, atmósferas y estabilidad orbital suficiente para procesos evolutivos largos.
+
+\subsection{$f_l$: aparición de vida}
+Es uno de los términos más inciertos. La Tierra aporta un único ejemplo confirmado. No sabemos si la vida emerge con alta probabilidad cuando las condiciones químicas son adecuadas, o si es un evento rarísimo.
+
+\subsection{$f_i$: transición a inteligencia}
+La vida microbiana pudo surgir relativamente temprano en la Tierra, pero la inteligencia tecnológica tardó miles de millones de años. Esto sugiere que el paso de vida simple a vida compleja puede ser un cuello de botella.
+
+\subsection{$f_c$: tecnoseñales detectables}
+No toda inteligencia desarrolla radioastronomía, telecomunicaciones o emisiones detectables desde lejos. También es posible que usen tecnologías que no estamos buscando.
+
+\subsection{$L$: duración de detectabilidad}
+Este término domina muchos escenarios: aunque surjan civilizaciones, si su fase detectable es corta, la superposición temporal entre ellas puede ser mínima.
+
+\section{Ejemplos desarrollados}
+
+\begin{actividad}{Ejemplo 1: escenario moderadamente optimista}{act:ejemplo1}
+Supongamos:
+\[
+R_* = 2,\ f_p = 0.8,\ n_e = 0.3,\ f_l = 0.3,\ f_i = 0.02,\ f_c = 0.2,\ L = 8{,}000
+\]
+Entonces:
+\[
+N = 2 \cdot 0.8 \cdot 0.3 \cdot 0.3 \cdot 0.02 \cdot 0.2 \cdot 8000 = 4.608
+\]
+Interpretación: podrían coexistir alrededor de 5 civilizaciones detectables en la Vía Láctea.
+\end{actividad}
+
+\begin{actividad}{Ejemplo 2: escenario pesimista}{act:ejemplo2}
+Si mantenemos los términos astronómicos pero reducimos factores biológicos y de longevidad:
+\[
+R_* = 2,\ f_p = 0.8,\ n_e = 0.3,\ f_l = 0.01,\ f_i = 0.001,\ f_c = 0.1,\ L = 500
+\]
+resulta:
+\[
+N = 2 \cdot 0.8 \cdot 0.3 \cdot 0.01 \cdot 0.001 \cdot 0.1 \cdot 500 = 0.00024
+\]
+Interpretación: la expectativa de civilizaciones coexistentes es mucho menor que 1; en términos prácticos, podría no haber ninguna detectable en este momento \cite{baak2026implicationspessimisticlowerlimit}.
+\end{actividad}
+
+\begin{actividad}{Ejemplo 3: extensión geofísica inspirada en literatura reciente}{act:ejemplo3}
+Tomamos el escenario del ejemplo 1 e incorporamos dos factores adicionales:
+\[
+N' = N \cdot f_{oc} \cdot f_{pt}
+\]
+con $f_{oc}$ = fracción de planetas habitables con continentes y océanos significativos, y $f_{pt}$ = fracción de esos planetas con tectónica de placas activa por al menos 0.5 Ga \cite{cite-key}.
+
+Si $f_{oc} = 0.1$ y $f_{pt} = 0.01$:
+\[
+N' = 4.608 \cdot 0.1 \cdot 0.01 = 0.004608
+\]
+Interpretación: incluir filtros geodinámicos puede reducir fuertemente la estimación de civilizaciones complejas.
+\end{actividad}
+
+\section{Discusión didáctica para el estudiante}
+
+\begin{idea}{Idea central de la clase}{idea:idea-central}
+La ecuación de Drake no es una calculadora exacta del universo; es un mapa de ignorancias y evidencias. Cada término indica qué sabemos bien, qué conocemos a medias y qué apenas empezamos a investigar.
+\end{idea}
+
+\begin{nota}{Error común}{nota:error}
+Un valor alto o bajo de $N$ no es ``la verdad final''. Es un resultado condicionado por supuestos. Cambiar supuestos razonables puede alterar órdenes de magnitud completos.
+\end{nota}
+
+\section{Preguntas guía para debate en clase}
+
+\begin{itemize}[leftmargin=1.5em]
+    \item ¿Qué término de la ecuación consideras más incierto y por qué?
+    \item Si encontráramos vida microbiana fuera de la Tierra, ¿qué término cambiaría primero?
+    \item ¿Es posible que existan civilizaciones no detectables por nuestros métodos actuales?
+    \item ¿Cómo se relaciona la sostenibilidad de una civilización con el parámetro $L$?
+    \item ¿Crees que los factores geológicos (tectónica, continentes, océanos) deben incorporarse siempre en modelos de vida compleja?
+\end{itemize}
+
+\section{Tareas para el estudiante}
+
+\begin{compromiso}{Trabajo autónomo}{comp:tareas}
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Cálculo base:} proponga un conjunto propio de valores para los 7 factores clásicos y calcule $N$ paso a paso.
+    \item \textbf{Análisis de sensibilidad:} cambie solo uno de los términos ($f_l$, $f_i$ o $L$) en un factor de 10 y explique cuánto cambia $N$.
+    \item \textbf{Comparación de modelos:} use su resultado base y luego incorpore $f_{oc}$ y $f_{pt}$ para calcular $N'$. Escriba una comparación crítica entre ambos modelos.
+    \item \textbf{Miniensayo (1–2 páginas):} responda: \enquote{¿La paradoja de Fermi sugiere que estamos solos o que todavía buscamos mal?}. Debe citar al menos una idea de \cite{baak2026implicationspessimisticlowerlimit} y una de \cite{cite-key}.
+    \item \textbf{Pregunta abierta de investigación:} formule una pregunta que pueda investigarse en el semillero con recursos escolares (por ejemplo, tecnoseñales, exoplanetas habitables, o evolución de vida compleja).
+\end{enumerate}
+\end{compromiso}
+
+\backmatter
+\chapter*{Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+
+\begin{thebibliography}{99}
+
+\bibitem{baak2026implicationspessimisticlowerlimit}
+Baak, M., y Snoek, H. (2026).
+\textit{Implications of the Pessimistic Lower Limit on the Drake Equation}.
+arXiv:2603.02372.
+\url{https://arxiv.org/abs/2603.02372}
+
+\bibitem{cite-key}
+Stern, R. J., y Gerya, T. V. (2024).
+The importance of continents, oceans and plate tectonics for the evolution of complex life:
+implications for finding extraterrestrial civilizations.
+\textit{Scientific Reports}, 14, 8552.
+\url{https://doi.org/10.1038/s41598-024-54700-x}
+
+\end{thebibliography}
+
+\end{document}
